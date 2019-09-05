@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<!-- Original: http://opensask.ca/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>COMP1021</title>
+    <link rel="stylesheet" href=".static/basic.css" type="text/css" />
+    <link rel="stylesheet" href=".static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href=".static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href=".static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href=".static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href=".static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href=".static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href=".static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href=".static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href=".static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href=".static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href=".static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href=".static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href=".static/poll.css" type="text/css" />
+    <link rel="stylesheet" href=".static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href=".static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href=".static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href=".static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href=".static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href=".static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href=".static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '/',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src=".static/runestonebase.js"></script>
+    <script type="text/javascript" src=".static/jquery.js"></script>
+    <script type="text/javascript" src=".static/underscore.js"></script>
+    <script type="text/javascript" src=".static/doctools.js"></script>
+    <script type="text/javascript" src=".static/jquery.highlight.js"></script>
+    <script type="text/javascript" src=".static/bookfuncs.js"></script>
+    <script type="text/javascript" src=".static/codemirror.js"></script>
+    <script type="text/javascript" src=".static/xml.js"></script>
+    <script type="text/javascript" src=".static/css.js"></script>
+    <script type="text/javascript" src=".static/htmlmixed.js"></script>
+    <script type="text/javascript" src=".static/python.js"></script>
+    <script type="text/javascript" src=".static/javascript.js"></script>
+    <script type="text/javascript" src=".static/activecode.js"></script>
+    <script type="text/javascript" src=".static/skulpt.min.js"></script>
+    <script type="text/javascript" src=".static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src=".static/clike.js"></script>
+    <script type="text/javascript" src=".static/timed_activecode.js"></script>
+    <script type="text/javascript" src=".static/animationbase.js"></script>
+    <script type="text/javascript" src=".static/mchoice.js"></script>
+    <script type="text/javascript" src=".static/timedmc.js"></script>
+    <script type="text/javascript" src=".static/timed.js"></script>
+    <script type="text/javascript" src=".static/clickable.js"></script>
+    <script type="text/javascript" src=".static/timedclickable.js"></script>
+    <script type="text/javascript" src=".static/d3.v2.min.js"></script>
+    <script type="text/javascript" src=".static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src=".static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src=".static/pytutor.js"></script>
+    <script type="text/javascript" src=".static/codelens.js"></script>
+    <script type="text/javascript" src=".static/skulpt.min.js"></script>
+    <script type="text/javascript" src=".static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src=".static/datafile.js"></script>
+    <script type="text/javascript" src=".static/dragndrop.js"></script>
+    <script type="text/javascript" src=".static/timeddnd.js"></script>
+    <script type="text/javascript" src=".static/fitb.js"></script>
+    <script type="text/javascript" src=".static/timedfitb.js"></script>
+    <script type="text/javascript" src=".static/lib/prettify.js"></script>
+    <script type="text/javascript" src=".static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src=".static/parsons.js"></script>
+    <script type="text/javascript" src=".static/timedparsons.js"></script>
+    <script type="text/javascript" src=".static/poll.js"></script>
+    <script type="text/javascript" src=".static/reveal.js"></script>
+    <script type="text/javascript" src=".static/shortanswer.js"></script>
+    <script type="text/javascript" src=".static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src=".static/showEval.js"></script>
+    <script type="text/javascript" src=".static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src=".static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src=".static/jquery-fix.js"></script>
+    <script type="text/javascript" src=".static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src=".static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src=".static/waypoints.min.js"></script>
+    <script type="text/javascript" src=".static/rangy-core.js"></script>
+    <script type="text/javascript" src=".static/rangy-textrange.js"></script>
+    <script type="text/javascript" src=".static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src=".static/user-highlights.js"></script>
+    <script type="text/javascript" src=".static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src=".static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src=".static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src=".static/jquery-migrate-1.2.1.min.js"></script>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url(".static/img/logo_smallx.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand">COMP1021</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<div class="container" id="main-content">
+
+<markdown id="pg1">
+# Introduction to Turtle Graphics
+</markdown>
+
+<pycode>
+print("It's a typhoon!")
+</pycode>
+
+<pycode>
+input("What is your name?")
+</pycode>
+
+<div data-childcomponent="wdtpd_turtle_assn_1" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+name = input("What is your name?")
+print("Your name is " + name)
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_turtle_assn_1" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_4 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+money = input("How much money in your pocket?")
+print("Cool, you have " + money + " !!")
+print("Cool, you have ",  money, " !!")
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_turtle_assn_1" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_5 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+money_hkd = input("How much money in HKD in your pocket?")
+print(money_hkd * 151.1)
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_turtle_assn_1" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_6 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+money_hkd = input("How much money in HKD in your pocket?")
+print(int(money_hkd) * 151.1)
+</textarea>
+</div>
+
+
+<div data-childcomponent="wdtpd_turtle_assn_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=assn_1 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+import random
+rint = random.randint(1,10)
+print(rint)
+</textarea>
+</div>
+
+
+<div data-childcomponent="wdtpd_turtle_assn_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=assn_2 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+import random
+rint = random.randint(1,2)
+if rint is 1:
+    print("odd")
+else:
+    print("even")
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_turtle_assn_3" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=assn_3 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program print?'>
+# Mini chat bot
+import random
+
+name = input("What is your name?")
+rint = random.randint(1,2)
+
+if rint is 1:
+    print("Hi " + name)
+else:
+    print("Wow, Hello " + name)
+
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_4 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program output? Be as specific as possible!'>
+import turtle
+
+turtle.forward(200)
+turtle.done()
+
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_4 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program output? Be as specific as possible!'>
+import turtle
+
+turtle.backward(100)
+turtle.done()
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_4 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program output? Be as specific as possible!'>
+import turtle
+
+turtle.forward(75)
+turtle.width(5)
+turtle.forward(75)
+
+turtle.done()
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_4 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program output? Be as specific as possible!'>
+import turtle
+
+turtle.left(90)
+turtle.forward(75)
+
+turtle.right(45)
+turtle.width(5)
+turtle.forward(75)
+
+turtle.done()
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_4 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program output? Be as specific as possible!'>
+import turtle
+turtle.goto(50, 50)
+
+</textarea>
+</div>
+
+<markdown id="pg6">
+# Moving Back Home
+* The initial position of the turtle, i.e. (0, 0), is called the home of the turtle
+* You can quickly move the turtle back to its home using this line of code:
+
+   `turtle.home()`
+* This is the same as running this code:
+
+   `turtle.goto(0, 0)`
+</markdown>
+
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_4 data-lang="python"    data-timelimit=25000   data-audio=''     data-caption='What will this program output? Be as specific as possible!'>
+import turtle
+
+turtle.goto(50, 50)
+turtle.goto(-20, 70)
+
+turtle.home()
+#turtle.goto(0,0)
+
+</textarea>
+</div>
+
+<markdown id="pg6">
+# An Example Using Multiple Commands
+* This example demonstrates how the turtle reacts to a combination of the turtle commands that we have met so far
+![image](https://user-images.githubusercontent.com/901975/64345905-bd4ec680-d023-11e9-9f5e-90915340a388.png)
+</markdown>
+
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" data-lang="python"  data-timelimit=25000>
+import turtle
+
+turtle.left(5) # Tell the turtle to turn left 5 degrees
+
+# Draw the right box and the connecting line
+turtle.forward(175)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+
+turtle.right(90)
+</textarea>
+</div>
+
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" data-lang="python"  data-timelimit=25000>
+import turtle
+
+turtle.left(5) # Tell the turtle to turn left 5 degrees
+
+# Draw the right box and the connecting line
+turtle.forward(175)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+
+turtle.right(90)
+
+# Draw the left box and the connecting line
+turtle.forward(225)
+turtle.right(90)
+turtle.forward(75)
+turtle.right(90)
+turtle.forward(75)
+turtle.right(90)
+turtle.forward(75)
+
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" data-lang="python"  data-timelimit=25000>
+import turtle
+
+turtle.left(5) # Tell the turtle to turn left 5 degrees
+
+# Draw the right box and the connecting line
+turtle.forward(175)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+
+turtle.right(90)
+
+# Draw the left box and the connecting line
+turtle.forward(225)
+turtle.right(90)
+turtle.forward(75)
+turtle.right(90)
+turtle.forward(75)
+turtle.right(90)
+turtle.forward(75)
+
+# Return to the centre
+turtle.left(90)
+turtle.forward(75)
+turtle.right(95)
+
+# Draw the base
+turtle.forward(25)
+turtle.left(90)
+turtle.forward(50)
+turtle.right(90)
+turtle.forward(20)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(20)
+turtle.right(90)
+turtle.forward(50)
+</textarea>
+</div>
+
+<markdown>
+# Lifting Up and Putting Down the Pen
+* By default, when the turtle moves, the pen draws
+* If you want the turtle to move without drawing, you tell the turtle to lift up the pen:
+
+  `turtle.up()`
+* Nothing is drawn when the turtle moves after that
+* To let the turtle draw again, tell the turtle to put the pen down using this code:
+
+  `turtle.down()`
+
+# Another Example
+* The following example is exactly the same as the previous example, but this time the pen has been lifted up and put down at appropriate places.
+
+![image](https://user-images.githubusercontent.com/901975/64346613-005d6980-d025-11e9-872e-0eda7f6d840c.png)
+</markdown>
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" data-lang="python"  data-timelimit=25000>
+import turtle
+
+turtle.left(5) # Tell the turtle to turn left 5 degrees
+turtle.up() # Lift up the pen.
+
+# From now on, the turtle will not draw anything when it moves.
+turtle.forward(75) # Turtle walks forward but draws nothing
+
+turtle.down() # Put down the pen
+
+# The turtle draws again
+
+# Draw the right box
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.right(90)
+</textarea>
+</div>
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" data-lang="python"  data-timelimit=25000>
+import turtle
+
+turtle.left(5) # Tell the turtle to turn left 5 degrees
+turtle.up() # Lift up the pen.
+
+# From now on, the turtle will not draw anything when it moves.
+turtle.forward(75) # Turtle walks forward but draws nothing
+
+turtle.down() # Put down the pen
+
+# The turtle draws again
+
+# Draw the right box
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.right(90)
+
+# Draw the left box
+turtle.up()
+turtle.forward(150)
+turtle.down()
+
+turtle.forward(75)
+turtle.right(90)
+turtle.forward(75)
+turtle.right(90)
+turtle.forward(75)
+turtle.right(90)
+turtle.forward(75)
+
+# Return to the centre
+turtle.up()
+turtle.left(90)
+turtle.forward(75)
+turtle.right(95)
+turtle.forward(25)
+turtle.down()
+
+# Draw the base
+turtle.left(90)
+turtle.forward(50)
+turtle.right(90)
+turtle.forward(20)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(20)
+turtle.right(90)
+turtle.forward(50)
+</textarea>
+</div>
+
+<markdown>
+# Drawing Shapes
+* We can draw lots of different shapes with lines
+* Here is an example that draws a triangle:
+</markdown>
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_4 data-lang="python"    data-timelimit=25000
+          data-audio=''  data-caption='A hollow triangle is drawn'>
+import turtle
+
+turtle.forward(100)
+turtle.right(120)
+turtle.forward(100)
+turtle.right(120)
+turtle.forward(100)
+</textarea>
+</div>
+
+<markdown>
+# Drawing Solid Shapes
+* You can tell the turtle to draw filled shapes
+* Before drawing a shape, you need to run this line of code:
+  'turtle.begin_fill()'
+
+* And after finishing the shape, use this line of code:
+  `turtle.end_fill()`
+
+* The shape will then be immediately filled with the fill colour
+
+# Changing the Pen Colour
+* You can easily change the colours
+* The initial colour of the pen is black
+* You can change the pen colour (=line colour) using the turtle.color command
+* Here is an example changing the pen colour to red:
+  `turtle.color("red")`
+* And to change the pen colour to yellow:
+  `turtle.color("yellow")`
+
+# Changing the Fill Colour
+* You can also change the fill colour using the turtle.fillcolor command, like this:
+`turtle.fillcolor("yellow")`
+* If you want to, you can change both colours at the same time:
+`turtle.color("red", "yellow") # Line color, Fill color
+
+* After this line, every line drawn by the turtle will be red and every filled shape will be filled with yellow
+
+# An Example of Using Colours
+* This example illustrates how to draw a yellow triangle with a red border
+
+</markdown>
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_4 data-lang="python"    data-timelimit=25000
+          data-audio=''  data-caption='An Example of Using Colours'>
+import turtle
+
+turtle.color("red", "yellow")
+
+turtle.begin_fill()
+
+turtle.forward(200)
+turtle.right(120)
+turtle.forward(200)
+turtle.right(120)
+turtle.forward(200)
+
+turtle.end_fill()
+</textarea>
+</div>
+
+<markdown>
+# Clearing the Screen
+
+* To clear everything drawn so far, run the following line of code:
+`turtle.clear()`
+*The position and orientation of the turtle remains the same as whatever it was before running the code
+![image](https://user-images.githubusercontent.com/901975/64348183-503d3000-d027-11e9-9149-653f139979e8.png)
+
+</markdown>
+
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_4 data-lang="python"    data-timelimit=25000
+          data-audio=''  data-caption='Clear'>
+import turtle
+
+turtle.color("red", "yellow")
+
+turtle.begin_fill()
+
+turtle.forward(200)
+turtle.right(120)
+turtle.forward(200)
+turtle.right(120)
+turtle.forward(200)
+
+turtle.end_fill()
+
+turtle.clear()
+</textarea>
+</div>
+
+<markdown>
+# Resetting Everything
+* If you want to clear the turtle window as well as resetting everything to the initial state, you can use `turtle.reset()`
+* After running the command, everything such as the turtle position, orientation and colours will be back to their initial values
+* For example, the turtle will move back home and look to the right hand side of the window
+
+</markdown>
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_4 data-lang="python"    data-timelimit=25000
+          data-audio=''  data-caption='Clear'>
+import turtle
+
+turtle.color("red", "yellow")
+
+turtle.begin_fill()
+
+turtle.forward(200)
+turtle.right(120)
+turtle.forward(200)
+turtle.right(120)
+turtle.forward(200)
+
+turtle.end_fill()
+
+turtle.clear()
+turtle.reset()
+</textarea>
+</div>
+
+<markdown>
+# Speeding Up the Turtle
+* The turtle initially moves fairly slowly
+* You can adjust the moving speed of the turtle using the turtle.speed command
+* The initial speed value is 3
+* For example, you can make the turtle move faster by running this line of code:
+`turtle.speed(8)`
+
+# The Turtle Speed Value
+* The speed value is an integer from 0 to 10
+* The speed changes from very slow to very fast from 1 to 10, i.e.
+  * 1=slow speed … 6=normal speed … 10=fast speed
+* A speed value of 0 means no animation at all
+* If you use the value of 0 you will still see the turtle ‘jump’ immediately from one position to another instead of moving gradually
+
+# Drawing Circles and Arcs
+* To draw a circle, use
+`circle()`
+</markdown>
+
+<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">
+<textarea data-component="activecode" id=assn_4 data-lang="python"    data-timelimit=25000
+          data-audio=''  data-caption='Clear'>
+import turtle
+turtle.circle( 100 )
+</textarea>
+</div>
+
+<markdown>
+* You can also draw part of a circle:
+</markdown>
+
+<pycode data-caption="Clear">
+import turtle
+turtle.circle( 250 , 90 )
+</pycode>
+
+
+<markdown>
+# Drawing a Teddy Bear
+* In this example, we will draw a cute teddy bear using all the commands we have learned
+
+![image](https://user-images.githubusercontent.com/901975/64349506-ac08b880-d029-11e9-8a5b-fa8595d1c67a.png)
+
+</markdown>
+
+<pycode>
+import turtle
+
+# Two eyes
+turtle.circle(66)
+turtle.right(180)
+turtle.circle(66)
+
+# Right eyeball
+turtle.up()
+turtle.left(90)
+turtle.forward(33)
+turtle.right(90)
+turtle.forward(34)
+turtle.down()
+turtle.fillcolor("cyan")
+turtle.begin_fill()
+turtle.circle(33)
+turtle.end_fill()
+turtle.up()
+turtle.forward(15)
+turtle.left(90)
+turtle.forward(4)
+turtle.right(90)
+turtle.down()
+turtle.fillcolor("black")
+turtle.begin_fill()
+turtle.circle(11)
+turtle.end_fill()
+
+# Left eyeball
+turtle.up()
+turtle.goto(0, 0)
+turtle.left(270)
+turtle.forward(33)
+turtle.left(90)
+turtle.forward(34)
+turtle.left(180)
+turtle.down()
+turtle.fillcolor("cyan")
+turtle.begin_fill()
+turtle.circle(33)
+turtle.end_fill()
+turtle.up()
+turtle.backward(15)
+turtle.right(90)
+turtle.backward(4)
+turtle.left(90)
+turtle.down()
+turtle.fillcolor("black")
+turtle.begin_fill()
+turtle.circle(11)
+turtle.end_fill()
+
+# But isn't it stupid? Too many repeats?
+</pycode>
+
+
+<markdown>
+# Hiding the Turtle
+* After the turtle has finished drawing, the turtle mark is still shown
+* It doesn’t look good on top of the teddy bear image we have drawn
+* We can make the turtle disappear:
+  `turtle.hideturtle()`
+
+# Writing Text Using the Turtle
+* You can display text using the turtle
+* For example, you can use the code below to write the text ‘COMP1021’ in the turtle window:
+`turtle.write("COMP1021")`
+* The text is shown all at once instead of being gradually drawn
+
+# Customising the Font
+* If you want to, you can customise the font using the font option
+* For example, a bigger and bold font can be used to write the text ‘COMP1021’ in the window
+  `turtle.write("COMP1021", font=("Arial", 20, "bold"))`
+
+# More information
+* https://docs.python.org/3.3/library/turtle.html?highlight=turtle
+</markdown>
+
+<!-- EOC -->
+<!-- markdown -> html -->
+<script type="text/javascript">
+
+var markTags = document.getElementsByTagName("markdown");
+
+for (i = 0; i < markTags.length; i++) {
+    markTags[i].innerHTML = marked(markTags[i].innerHTML);
+}
+
+var codeHead = '<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">'
+             + '<textarea data-component="activecode" id="code_id" data-lang="python"  data-timelimit=25000 data-caption="">';
+var codeTail = '</textarea></div>';
+
+var codeTags = document.getElementsByTagName("pycode");
+for (i = 0; i < codeTags.length; i++) {
+    codeTags[i].innerHTML = codeHead + codeTags[i].innerHTML + codeTail;
+}
+
+</script>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+
+      | <a href="#">Back to top</a>
+
+    </p>
+    <p>
+    Created by Dan Schellenberg and Sung Kim. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
