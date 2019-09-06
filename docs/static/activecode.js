@@ -153,7 +153,7 @@ ActiveCode.prototype.createControls = function () {
     this.runButton = butt;
     $(butt).click(this.runProg.bind(this));
     $(butt).attr("type","button")
-    
+
     if (! this.hidecode) {
         var butt = document.createElement("button");
         $(butt).text("Load History");
@@ -241,8 +241,9 @@ ActiveCode.prototype.createControls = function () {
         $(butt).click((function() {new AudioTour(this.divid, this.code, 1, $(this.origElem).data("audio"))}).bind(this));
     }
 
-
-    $(this.outerDiv).prepend(ctrlDiv);
+    // HUNKIM: Add control in the bottom
+    // $(this.outerDiv).prepend(ctrlDiv);
+    $(this.outerDiv).append(ctrlDiv);
     this.controlDiv = ctrlDiv;
 
 };
