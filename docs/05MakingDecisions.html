@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!-- Original: http://opensask.ca/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>COMP1021</title>
+    <link rel="stylesheet" href="static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '/',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="static/runestonebase.js"></script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="static/bookfuncs.js"></script>
+    <script type="text/javascript" src="static/codemirror.js"></script>
+    <script type="text/javascript" src="static/xml.js"></script>
+    <script type="text/javascript" src="static/css.js"></script>
+    <script type="text/javascript" src="static/htmlmixed.js"></script>
+    <script type="text/javascript" src="static/python.js"></script>
+    <script type="text/javascript" src="static/javascript.js"></script>
+    <script type="text/javascript" src="static/activecode.js"></script>
+    <script type="text/javascript" src="static/skulpt.min.js"></script>
+    <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="static/clike.js"></script>
+    <script type="text/javascript" src="static/timed_activecode.js"></script>
+    <script type="text/javascript" src="static/animationbase.js"></script>
+    <script type="text/javascript" src="static/mchoice.js"></script>
+    <script type="text/javascript" src="static/timedmc.js"></script>
+    <script type="text/javascript" src="static/timed.js"></script>
+    <script type="text/javascript" src="static/clickable.js"></script>
+    <script type="text/javascript" src="static/timedclickable.js"></script>
+    <script type="text/javascript" src="static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="static/pytutor.js"></script>
+    <script type="text/javascript" src="static/codelens.js"></script>
+    <script type="text/javascript" src="static/skulpt.min.js"></script>
+    <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="static/datafile.js"></script>
+    <script type="text/javascript" src="static/dragndrop.js"></script>
+    <script type="text/javascript" src="static/timeddnd.js"></script>
+    <script type="text/javascript" src="static/fitb.js"></script>
+    <script type="text/javascript" src="static/timedfitb.js"></script>
+    <script type="text/javascript" src="static/lib/prettify.js"></script>
+    <script type="text/javascript" src="static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="static/parsons.js"></script>
+    <script type="text/javascript" src="static/timedparsons.js"></script>
+    <script type="text/javascript" src="static/poll.js"></script>
+    <script type="text/javascript" src="static/reveal.js"></script>
+    <script type="text/javascript" src="static/shortanswer.js"></script>
+    <script type="text/javascript" src="static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="static/showEval.js"></script>
+    <script type="text/javascript" src="static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="static/jquery-fix.js"></script>
+    <script type="text/javascript" src="static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="static/waypoints.min.js"></script>
+    <script type="text/javascript" src="static/rangy-core.js"></script>
+    <script type="text/javascript" src="static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="static/user-highlights.js"></script>
+    <script type="text/javascript" src="static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="static/jquery-migrate-1.2.1.min.js"></script>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("static/img/logo_smallx.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand">COMP1021 - Introduction to Computer Science</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<div class="container" id="main-content">
+
+<markdown>
+# Making Decisions
+### David Rossiter, Gibson Lam and Sung Kim
+
+## Outcomes
+
+### After completing this presentation, you are expected to be able to:
+1. Use the if statements (if, elif and else) to make decisions in a Python program
+1. Write code using nested if statements
+
+## The if Statement
+* The if statement is used to decide whether some code will be executed
+* Here is a simple example:
+</markdown>
+
+<pycode>
+cost_of_chocolate = 10
+money_in_pocket = 10
+
+if money_in_pocket  >=  cost_of_chocolate: # You need the  : (colon) here
+    print("I have enough money to buy the chocolate!") # indentation
+</pycode>
+
+<markdown>
+## The Flow of the if Statement Example
+We can show the idea using a flowchart, like this:
+![image](https://user-images.githubusercontent.com/901975/64461879-1eb08b80-d131-11e9-821d-38f2e092bb7a.png)
+</markdown>
+
+<pycode>
+cost_of_chocolate = 12
+money_in_pocket = 10
+
+if money_in_pocket  >=  cost_of_chocolate: # You need the  : (colon) here
+    print("I have enough money to buy the chocolate!") # indentation
+</pycode>
+
+<markdown>
+## The if Condition
+* Python decides whether to run the code inside the if statement by evaluating the condition
+* In our example, the condition is the one shown below (enough money to buy chocolate?):
+```python
+...
+if <condition>
+<indentation>...
+```
+
+* If the condition is true, Python will run the code inside the if statement; otherwise, Python will skip the code
+</markdown>
+
+<pycode>
+cost_of_chocolate = 12
+money_in_pocket = 10
+
+if money_in_pocket  >=  cost_of_chocolate: # You need the  : (colon) here
+    print("I have enough money to buy the chocolate!")
+
+print("Go home")
+</pycode>
+
+<pycode>
+cost_of_chocolate = 12
+money_in_pocket = 10
+
+if money_in_pocket  >=  cost_of_chocolate: # You need the  : (colon) here
+    print("I have enough money to buy the chocolate!")
+    print("Eat")
+print("Go home")
+</pycode>
+
+<markdown>
+## You Must Use Indentation
+* In programming, ‘indentation’ means ‘moving the lines of code to the right, to the appropriate place’
+* For Python code, indentation is *very important!*
+* For example, there MUST be indentation here
+</markdown>
+
+<pycode>
+cost_of_chocolate = 12
+money_in_pocket = 10
+
+if money_in_pocket  >=  cost_of_chocolate: # You need the  : (colon) here
+    print("I have enough money to buy the chocolate!")
+    print("Eat")
+
+print("Go home")
+</pycode>
+
+<markdown>
+## Indentation is a MUST
+Without this indentation, the program won’t work!
+Although this sounds like trouble, it means that when you look at any Python code, it is easier to understand
+</markdown>
+
+<pycode>
+cost_of_chocolate = 12
+money_in_pocket = 10
+
+if money_in_pocket  >=  cost_of_chocolate: # You need the  : (colon) here
+print("I have enough money to buy the chocolate!")
+</pycode>
+
+<markdown>
+Indentation == 4 spaces (no TAB)
+
+* How far should you move a line of code for each ‘unit’ of indentation?
+* Usually, people simply press the Tab key (but this is not a good practice)
+  * Why?
+* Just add 4 spaces (or two)
+</markdown>
+
+<markdown>
+## Extending the if Statement
+* In English you might say: “if something otherwise something else”
+* For example:
+  * “if I have a million dollars I am rich otherwise I am poor”
+* We can do the same thing in Python by using the word ‘else’
+</markdown>
+
+<pycode>
+cost_of_chocolate = 10
+money_in_pocket = 10
+
+if money_in_pocket >= cost_of_chocolate:
+    print("I have enough money to buy the chocolate!")
+else:
+    print("No chocolate for me today...")
+</pycode>
+
+<markdown>
+## The Flow of the if … else Example
+![image](https://user-images.githubusercontent.com/901975/64463066-3ee24980-d135-11e9-8f12-a5d71bed0454.png)
+
+## Multiple if Statements
+* Sometimes it is useful to do a second test if the first test fails
+* Here is an example:
+</markdown>
+<pycode>
+cost_of_large_chocolate_bar = 12
+cost_of_small_chocolate_bar = 8
+money_in_pocket = 10
+
+if money_in_pocket >= cost_of_large_chocolate_bar:
+    print("I have enough money to buythe large chocolate!")
+else:
+    if money_in_pocket >= cost_of_small_chocolate_bar:
+        print("I can't afford the large bar, but I can afford the small bar!")
+</pycode>
+<markdown>
+## The else if, else if ... elif Statement
+* Instead of using many if statements we can use the elif statement, for example:
+</markdown>
+<pycode>
+cost_of_large_chocolate_bar = 12
+cost_of_small_chocolate_bar = 8
+money_in_pocket = 10
+
+if money_in_pocket >= cost_of_large_chocolate_bar:
+    print("I have enough money to buythe large chocolate!")
+elif money_in_pocket >= cost_of_small_chocolate_bar:
+    print("I can't afford the large bar, but I can afford the small bar!")
+</pycode>
+<markdown>
+## The Flow of the if … elif Example
+![image](https://user-images.githubusercontent.com/901975/64463455-b795d580-d136-11e9-901f-fecf418d617a.png)
+</markdown>
+<pycode>
+cost_of_large_chocolate_bar = 12
+cost_of_small_chocolate_bar = 11
+money_in_pocket = 10
+
+if money_in_pocket >= cost_of_large_chocolate_bar:
+    print("I have enough money to buythe large chocolate!")
+elif money_in_pocket >= cost_of_small_chocolate_bar:
+    print("I can't afford the large bar, but I can afford the small bar!")
+</pycode>
+
+<markdown>
+## Using if … elif … else
+* If both tests fail, our previous example doesn’t display anything
+* Let’s fix that by adding an else:
+</markdown>
+<pycode>
+cost_of_large_chocolate_bar = 12
+cost_of_small_chocolate_bar = 11
+money_in_pocket = 10
+
+if money_in_pocket >= cost_of_large_chocolate_bar:
+    print("I have enough money to buy the large chocolate!")
+elif money_in_pocket >= cost_of_small_chocolate_bar:
+    print("I can't afford the large bar but I can afford the small bar!")
+else:
+    print("No chocolate for me...")
+</pycode>
+
+<markdown>
+## The Flow of the if…elif…else Example
+![image](https://user-images.githubusercontent.com/901975/64463721-a4373a00-d137-11e9-9952-745f5ca17ad2.png)
+
+## An Example with Many elif
+* You can have as many elif parts as you like
+* Here’s an example which ‘converts’ a number into English:
+</markdown>
+<pycode>
+import random
+value = random.randint(0, 10)
+if value == 0:
+    number_in_english = "Zero"
+elif value == 1:
+    number_in_english = "One"
+elif value == 2:
+    number_in_english = "Two"
+elif value == 3:
+    number_in_english = "Three"
+elif value == 4:
+    number_in_english = "Four"
+elif value == 5:
+    number_in_english = "Five"
+elif value == 6:
+    number_in_english = "Six"
+elif value == 7:
+    number_in_english = "Seven"
+elif value == 8:
+    number_in_english = "Eight"
+elif value == 9:
+    number_in_english = "Nine"
+else:
+    number_in_english = "I don't know!"
+print("The number", value, "in English is", number_in_english)
+</pycode>
+<markdown>
+## The Flow of Using Many elif
+![image](https://user-images.githubusercontent.com/901975/64463888-422b0480-d138-11e9-8cf9-1d5f163693c0.png)
+
+## The Basic Pattern of  if
+![image](https://user-images.githubusercontent.com/901975/64463971-a6e65f00-d138-11e9-91da-f2e627e2ed68.png)
+
+## Nested if Statements
+* If you want to you can put an if statement inside another if statement
+* When you do that it is called a nested if
+![image](https://user-images.githubusercontent.com/901975/64464026-e1e89280-d138-11e9-9bdb-3fc32348a7bc.png)
+</markdown>
+<pycode>
+import random
+num = random.randint(-1,1)
+if num >= 0:
+    if num == 0:
+        print("Zero")
+    else:
+        print("Positive number")
+else:
+    print("Negative number")
+</pycode>
+<markdown>
+## Using Comparison Operators
+* You can do the following comparisons:
+* You can do the following comparisons:
+	* <	less than
+	* <=	less than or equal to
+	* >	greater than
+	* >=	greater than or equal to
+	* ==	equal to
+	* !=	not equal to
+* You can also use and or and not, discussed in another presentation
+</markdown>
+
+<!-- EOC -->
+<!-- markdown -> html -->
+
+<script type="text/javascript">
+
+var markTags = document.getElementsByTagName("markdown");
+
+for (i = 0; i < markTags.length; i++) {
+    markTags[i].innerHTML = marked(markTags[i].innerHTML);
+}
+
+var codeHead = '<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">'
+             + '<textarea data-component="activecode" id="code_id" data-lang="python"  data-timelimit=25000 data-caption="">';
+var codeTail = '</textarea></div>';
+
+var codeTags = document.getElementsByTagName("pycode");
+for (i = 0; i < codeTags.length; i++) {
+    codeTags[i].innerHTML = codeHead + codeTags[i].innerHTML + codeTail;
+}
+
+</script>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+
+      | <a href="#">Back to top</a>
+
+    </p>
+    <p>
+    Created by Dan Schellenberg and Sung Kim. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

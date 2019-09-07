@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<!-- Original: http://opensask.ca/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>COMP1021</title>
+    <link rel="stylesheet" href="static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '/',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="static/runestonebase.js"></script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="static/bookfuncs.js"></script>
+    <script type="text/javascript" src="static/codemirror.js"></script>
+    <script type="text/javascript" src="static/xml.js"></script>
+    <script type="text/javascript" src="static/css.js"></script>
+    <script type="text/javascript" src="static/htmlmixed.js"></script>
+    <script type="text/javascript" src="static/python.js"></script>
+    <script type="text/javascript" src="static/javascript.js"></script>
+    <script type="text/javascript" src="static/activecode.js"></script>
+    <script type="text/javascript" src="static/skulpt.min.js"></script>
+    <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="static/clike.js"></script>
+    <script type="text/javascript" src="static/timed_activecode.js"></script>
+    <script type="text/javascript" src="static/animationbase.js"></script>
+    <script type="text/javascript" src="static/mchoice.js"></script>
+    <script type="text/javascript" src="static/timedmc.js"></script>
+    <script type="text/javascript" src="static/timed.js"></script>
+    <script type="text/javascript" src="static/clickable.js"></script>
+    <script type="text/javascript" src="static/timedclickable.js"></script>
+    <script type="text/javascript" src="static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="static/pytutor.js"></script>
+    <script type="text/javascript" src="static/codelens.js"></script>
+    <script type="text/javascript" src="static/skulpt.min.js"></script>
+    <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="static/datafile.js"></script>
+    <script type="text/javascript" src="static/dragndrop.js"></script>
+    <script type="text/javascript" src="static/timeddnd.js"></script>
+    <script type="text/javascript" src="static/fitb.js"></script>
+    <script type="text/javascript" src="static/timedfitb.js"></script>
+    <script type="text/javascript" src="static/lib/prettify.js"></script>
+    <script type="text/javascript" src="static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="static/parsons.js"></script>
+    <script type="text/javascript" src="static/timedparsons.js"></script>
+    <script type="text/javascript" src="static/poll.js"></script>
+    <script type="text/javascript" src="static/reveal.js"></script>
+    <script type="text/javascript" src="static/shortanswer.js"></script>
+    <script type="text/javascript" src="static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="static/showEval.js"></script>
+    <script type="text/javascript" src="static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="static/jquery-fix.js"></script>
+    <script type="text/javascript" src="static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="static/waypoints.min.js"></script>
+    <script type="text/javascript" src="static/rangy-core.js"></script>
+    <script type="text/javascript" src="static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="static/user-highlights.js"></script>
+    <script type="text/javascript" src="static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="static/jquery-migrate-1.2.1.min.js"></script>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("static/img/logo_smallx.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand">COMP1021 - Introduction to Computer Science</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<div class="container" id="main-content">
+
+<markdown>
+# Loops
+### David Rossiter, Gibson Lam and Sung Kim
+
+## Outcomes
+
+### After completing this presentation, you are expected to be able to:
+1. Write loops using the while command
+1. Work with conditions using logical operators
+1. Write code using nested loops
+</markdown>
+
+<pycode>
+import turtle
+
+turtle.circle(10)
+turtle.circle(20)
+turtle.circle(30)
+turtle.circle(40)
+turtle.circle(50)
+turtle.circle(60)
+turtle.circle(70)
+</pycode>
+
+<markdown>
+## Loops: Do this many times
+* You can write loops in Python to do things repeatedly
+* Looping is a very useful feature because it makes repetitive work easier
+
+## Run till Sunset
+* Run while sun is up
+![image](https://user-images.githubusercontent.com/901975/64469103-33a41380-d15f-11e9-90f7-1f1c253b5a74.png)
+
+## While Loops
+
+```python
+while <condition>
+   ... statement(s) ...
+```
+
+* While condition is true, repeatedly execute `statement(s)`
+* A statement is a Python instruction
+* When condition is false, the while loop finishes
+
+# The Flow of a While Loop
+![image](https://user-images.githubusercontent.com/901975/64469139-aca36b00-d15f-11e9-976f-95b779cbf203.png)
+</markdown>
+
+<pycode>
+import turtle
+
+while True:
+    turtle.circle(30)
+</pycode>
+
+<pycode>
+import turtle
+
+start = 10
+while start < 70:
+    turtle.circle(30)
+    start = start + 10
+</pycode>
+
+<pycode>
+import turtle
+
+start = 10
+while start < 70:
+    turtle.circle(start)
+    start = start + 10
+</pycode>
+
+<markdown>
+## My turtle
+* create my own turtle.
+</markdown>
+
+<pycode>
+import turtle
+
+#create the turtles, and specify their attributes
+tur1 = turtle.Turtle()
+tur1.color('blue')
+tur1.shape('turtle')
+
+tur1.goto(100, 100)
+</pycode>
+
+<pycode>
+# Understand the coordination.
+import turtle
+
+#create the turtles, and specify their attributes
+tur1 = turtle.Turtle()
+tur1.color('blue')
+tur1.shape('turtle')
+
+tur1.goto(100, 100)
+tur1.write("I am at 100,100")
+
+tur1.goto(-100, 100)
+tur1.write("I am at -100,100")
+
+tur1.goto(-100, -100)
+tur1.write("I am at -100,-100")
+</pycode>
+
+<markdown>
+## Turtle race
+* Let's race with my turtle
+</markdown>
+
+<pycode>
+import turtle
+
+start_x = -150
+start_y = 0
+
+#create the turtles, and specify their attributes
+tur1 = turtle.Turtle()
+tur1.color('blue')
+tur1.shape('turtle')
+
+tur1.penup()
+# tur1.pendown()
+
+while start_x < 150:
+  tur1.goto(start_x, start_y)
+  start_x = start_x + 10
+</pycode>
+
+<pycode>
+import turtle
+import random
+
+start_x = -150
+start_y = 0
+
+#create the turtles, and specify their attributes
+tur1 = turtle.Turtle()
+tur1.color('blue')
+tur1.shape('turtle')
+
+tur1.penup()
+# tur1.pendown()
+
+while start_x < 150:
+  tur1.goto(start_x, start_y)
+  start_x = start_x + random.randint(1,20)
+</pycode>
+
+<markdown>
+## Multiple turtles
+</markdown>
+
+<pycode>
+import turtle
+import random
+
+# Turtle1
+tur1_start_x = -150
+tur1_start_y = -100
+
+tur1 = turtle.Turtle()
+tur1.color('blue')
+tur1.shape('turtle')
+tur1.penup()
+
+# Turtle2
+tur2_start_x = -150
+tur2_start_y = 0
+
+tur2 = turtle.Turtle()
+tur2.color('green')
+tur2.shape('turtle')
+tur2.penup()
+
+# Turtle3
+tur3_start_x = -150
+tur3_start_y = 100
+
+tur3 = turtle.Turtle()
+tur3.color('red')
+tur3.shape('turtle')
+tur3.penup()
+
+while tur1_start_x < 150:
+  tur1.goto(tur1_start_x, tur1_start_y)
+  tur1_start_x = tur1_start_x + random.randint(1,20)
+
+  tur2.goto(tur2_start_x, tur2_start_y)
+  tur2_start_x = tur2_start_x + random.randint(1,20)
+
+  tur3.goto(tur3_start_x, tur3_start_y)
+  tur3_start_x = tur3_start_x + random.randint(1,20)
+</pycode>
+
+<markdown>
+## When to Stop
+* When one of them is finished (at 150)
+```python
+ while cond1 and cond2 and cond3:
+```
+</markdown>
+
+<pycode>
+import turtle
+import random
+
+# Turtle1
+tur1_start_x = -150
+tur1_start_y = -100
+
+tur1 = turtle.Turtle()
+tur1.color('blue')
+tur1.shape('turtle')
+tur1.penup()
+
+# Turtle2
+tur2_start_x = -150
+tur2_start_y = 0
+
+tur2 = turtle.Turtle()
+tur2.color('green')
+tur2.shape('turtle')
+tur2.penup()
+
+# Turtle3
+tur3_start_x = -150
+tur3_start_y = 100
+
+tur3 = turtle.Turtle()
+tur3.color('red')
+tur3.shape('turtle')
+tur3.penup()
+
+while tur1_start_x < 150 and tur3_start_x < 150 and tur3_start_x < 150:
+  tur1.goto(tur1_start_x, tur1_start_y)
+  tur1_start_x = tur1_start_x + random.randint(1,20)
+
+  tur2.goto(tur2_start_x, tur2_start_y)
+  tur2_start_x = tur2_start_x + random.randint(1,20)
+
+  tur3.goto(tur3_start_x, tur3_start_y)
+  tur3_start_x = tur3_start_x + random.randint(1,20)
+</pycode>
+
+<markdown>
+## Add Grid
+* using while
+* Using `pendown()` and `penup()`
+* See the rules cafefully
+  * what is changing and not?
+  * how much?
+![image](https://user-images.githubusercontent.com/901975/64469544-8cc37580-d166-11e9-9439-096b2133965c.png)
+</markdown>
+
+<pycode>
+import turtle
+turtle.speed(8)
+
+start_x = -150
+
+while start_x <= 150:
+  turtle.penup()
+  turtle.goto(start_x, -150)
+  turtle.pendown()
+  turtle.goto(start_x, 150)
+  start_x = start_x + 30
+</pycode>
+
+<markdown>
+## Nested Loops
+* A nested loop is a loop within a loop
+![image](https://user-images.githubusercontent.com/901975/64469679-1ecc7d80-d169-11e9-81f7-aa79764aedd4.png)
+* For example, you can put a while loop inside another while loop
+</markdown>
+
+<pycode>
+import turtle
+turtle.speed(8)
+
+start_x = -150
+
+while start_x <= 150:
+  turtle.penup()
+  start_y = -150
+
+  while start_y<=150:
+    turtle.goto(start_x, start_y)
+    start_y = start_y + 150
+    turtle.pendown()
+
+  start_x = start_x + 30
+</pycode>
+
+<markdown>
+## All together
+</markdown>
+<pycode>
+import random
+import turtle
+turtle.speed(8)
+
+start_x = -150
+
+while start_x <= 150:
+  turtle.penup()
+  turtle.goto(start_x, -150)
+  turtle.pendown()
+  turtle.goto(start_x, 150)
+  turtle.write(start_x+150)
+  start_x = start_x + 30
+
+# Turtle1
+tur1_start_x = -150
+tur1_start_y = -100
+
+tur1 = turtle.Turtle()
+tur1.color('blue')
+tur1.shape('turtle')
+tur1.penup()
+
+# Turtle2
+tur2_start_x = -150
+tur2_start_y = 0
+
+tur2 = turtle.Turtle()
+tur2.color('green')
+tur2.shape('turtle')
+tur2.penup()
+
+# Turtle3
+tur3_start_x = -150
+tur3_start_y = 100
+
+tur3 = turtle.Turtle()
+tur3.color('red')
+tur3.shape('turtle')
+tur3.penup()
+
+while tur1_start_x < 150 and tur3_start_x < 150 and tur3_start_x < 150:
+  tur1.goto(tur1_start_x, tur1_start_y)
+  tur1_start_x = tur1_start_x + random.randint(1,20)
+
+  tur2.goto(tur2_start_x, tur2_start_y)
+  tur2_start_x = tur2_start_x + random.randint(1,20)
+
+  tur3.goto(tur3_start_x, tur3_start_y)
+  tur3_start_x = tur3_start_x + random.randint(1,20)
+
+</pycode>
+<markdown>
+## Excercise1: Who is the winner?
+</markdown>
+<pycode>
+import random
+import turtle
+turtle.speed(8)
+
+start_x = -150
+
+while start_x <= 150:
+  turtle.penup()
+  turtle.goto(start_x, -150)
+  turtle.pendown()
+  turtle.goto(start_x, 150)
+  turtle.write(start_x+150)
+  start_x = start_x + 30
+
+# Turtle1
+tur1_start_x = -150
+tur1_start_y = -100
+
+tur1 = turtle.Turtle()
+tur1.color('blue')
+tur1.shape('turtle')
+tur1.penup()
+
+# Turtle2
+tur2_start_x = -150
+tur2_start_y = 0
+
+tur2 = turtle.Turtle()
+tur2.color('green')
+tur2.shape('turtle')
+tur2.penup()
+
+# Turtle3
+tur3_start_x = -150
+tur3_start_y = 100
+
+tur3 = turtle.Turtle()
+tur3.color('red')
+tur3.shape('turtle')
+tur3.penup()
+
+while tur1_start_x < 150 and tur3_start_x < 150 and tur3_start_x < 150:
+  tur1.goto(tur1_start_x, tur1_start_y)
+  tur1_start_x = tur1_start_x + random.randint(1,20)
+
+  tur2.goto(tur2_start_x, tur2_start_y)
+  tur2_start_x = tur2_start_x + random.randint(1,20)
+
+  tur3.goto(tur3_start_x, tur3_start_y)
+  tur3_start_x = tur3_start_x + random.randint(1,20)
+
+turtle.penup()
+turtle.goto(-100, -170)
+turtle.write("The winner is XXX!")
+</pycode>
+<markdown>
+## More excercises
+* More fun games?
+* Nested loops?
+</markdown>
+
+<!-- EOC -->
+<!-- markdown -> html -->
+
+<script type="text/javascript">
+
+var markTags = document.getElementsByTagName("markdown");
+
+for (i = 0; i < markTags.length; i++) {
+    markTags[i].innerHTML = marked(markTags[i].innerHTML);
+}
+
+var codeHead = '<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">'
+             + '<textarea data-component="activecode" id="code_id" data-lang="python"  data-timelimit=25000 data-caption="">';
+var codeTail = '</textarea></div>';
+
+var codeTags = document.getElementsByTagName("pycode");
+for (i = 0; i < codeTags.length; i++) {
+    codeTags[i].innerHTML = codeHead + codeTags[i].innerHTML + codeTail;
+}
+
+</script>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+
+      | <a href="#">Back to top</a>
+
+    </p>
+    <p>
+    Created by Dan Schellenberg and Sung Kim. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
