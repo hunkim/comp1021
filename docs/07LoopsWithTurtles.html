@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<!-- Original: http://opensask.ca/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>COMP1021</title>
+    <link rel="stylesheet" href="static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '/',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="static/runestonebase.js"></script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="static/bookfuncs.js"></script>
+    <script type="text/javascript" src="static/codemirror.js"></script>
+    <script type="text/javascript" src="static/xml.js"></script>
+    <script type="text/javascript" src="static/css.js"></script>
+    <script type="text/javascript" src="static/htmlmixed.js"></script>
+    <script type="text/javascript" src="static/python.js"></script>
+    <script type="text/javascript" src="static/javascript.js"></script>
+    <script type="text/javascript" src="static/activecode.js"></script>
+    <script type="text/javascript" src="static/skulpt.min.js"></script>
+    <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="static/clike.js"></script>
+    <script type="text/javascript" src="static/timed_activecode.js"></script>
+    <script type="text/javascript" src="static/animationbase.js"></script>
+    <script type="text/javascript" src="static/mchoice.js"></script>
+    <script type="text/javascript" src="static/timedmc.js"></script>
+    <script type="text/javascript" src="static/timed.js"></script>
+    <script type="text/javascript" src="static/clickable.js"></script>
+    <script type="text/javascript" src="static/timedclickable.js"></script>
+    <script type="text/javascript" src="static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="static/pytutor.js"></script>
+    <script type="text/javascript" src="static/codelens.js"></script>
+    <script type="text/javascript" src="static/skulpt.min.js"></script>
+    <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="static/datafile.js"></script>
+    <script type="text/javascript" src="static/dragndrop.js"></script>
+    <script type="text/javascript" src="static/timeddnd.js"></script>
+    <script type="text/javascript" src="static/fitb.js"></script>
+    <script type="text/javascript" src="static/timedfitb.js"></script>
+    <script type="text/javascript" src="static/lib/prettify.js"></script>
+    <script type="text/javascript" src="static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="static/parsons.js"></script>
+    <script type="text/javascript" src="static/timedparsons.js"></script>
+    <script type="text/javascript" src="static/poll.js"></script>
+    <script type="text/javascript" src="static/reveal.js"></script>
+    <script type="text/javascript" src="static/shortanswer.js"></script>
+    <script type="text/javascript" src="static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="static/showEval.js"></script>
+    <script type="text/javascript" src="static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="static/jquery-fix.js"></script>
+    <script type="text/javascript" src="static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="static/waypoints.min.js"></script>
+    <script type="text/javascript" src="static/rangy-core.js"></script>
+    <script type="text/javascript" src="static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="static/user-highlights.js"></script>
+    <script type="text/javascript" src="static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="static/jquery-migrate-1.2.1.min.js"></script>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("static/img/logo_smallx.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand">COMP1021 - Introduction to Computer Science</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<div class="container" id="main-content">
+
+<!-- EDIT From here --->
+
+<markdown>
+# Loops with Turtle Graphics
+### David Rossiter, Gibson Lam and Sung Kim
+
+## Outcomes
+
+### After completing this presentation, you are expected to be able to:
+1. Use while loops to create shapes with turtle graphics programming
+1. Understand repetitive rules
+
+## While Loops in Turtle Graphics
+* Draw a square with a length of 10 
+* you need to ask the turtle to move forward and turn four times
+</markdown>
+
+<pycode>
+import turtle
+
+turtle.forward(100)
+turtle.right(90)
+
+turtle.forward(100)
+turtle.right(90)
+
+turtle.forward(100)
+turtle.right(90)
+
+turtle.forward(100)
+turtle.right(90)
+</pycode>
+
+<markdown>
+## Drawing a Square Using a Loop
+* You can use a while loop to draw a square
+</markdown>
+
+<pycode>
+import turtle
+
+# Run the loop four times,
+# The loop will be executed
+# with these values, side = 0, 1, 2, 3
+
+side = 0
+while side < 4:
+    turtle.forward(100)
+    turtle.right(90)
+
+    side = side + 1
+</pycode>
+
+<markdown>
+## Drawing a Star Shape
+* How about STAR?
+![image](https://user-images.githubusercontent.com/901975/64471351-50ead900-d183-11e9-9254-95a460c0ac10.png)
+* What are the rules?
+</markdown>
+
+<pycode>
+import turtle
+side = 0
+
+while side < 5:
+    turtle.forward(100)
+    turtle.right(144)
+
+    side = side + 1
+</pycode>
+
+<markdown>
+## Generalization?
+</markdown>
+
+<pycode>
+import turtle
+
+turtle.speed(10)
+side = 0
+side_num = 7
+while side < side_num:
+    turtle.forward(100)
+    turtle.right(360*(side_num-3)/side_num)
+
+    side = side + 1
+</pycode>
+
+<markdown>
+## Flower! Using Nested Loops
+* On the right is a flower image created by a single program
+* It’s a fun example of using loops, including nested loops
+
+* Stage 0: get the turtle graphics started
+  * import the turtle module, open the window
+* Stage 1: create the curved stem
+  * part of a circle
+* Stage 2: draw the petals
+  * uses a nested loop
+* Stage 3: draw the central part
+  * uses a loop
+
+![image](https://user-images.githubusercontent.com/901975/64471594-2ea68a80-d186-11e9-8350-4647ad56234c.png)
+</markdown>
+
+<pycode>
+import turtle
+
+turtle.speed(0)
+
+turtle.width(10)
+turtle.color("green")
+
+turtle.up()             # Don't draw while we move
+turtle.goto(100, -300)  # Move the turtle to bottom right
+turtle.left(90)         # Point the turtle upwards
+turtle.down()           # Start drawing from now onwards
+turtle.circle(1000, 20) # Draw circle with radius 1000
+</pycode>
+
+<markdown>
+## Stage 2 – Drawing a Flower Using Nested Loops
+* We use a nested loop to draw the eight red petals of the flower, shown here: 
+* The inner while loop draws one petal using five circles
+* The outer while loop uses the inner while loop to draw eight red petals
+
+![image](https://user-images.githubusercontent.com/901975/64471689-f6537c00-d186-11e9-8312-4579728077ba.png)
+</markdown>
+
+<pycode>
+import turtle
+
+turtle.color("red")
+petal_piece = 0
+
+while petal_piece < 5:
+    turtle.up()
+    turtle.forward(petal_piece * 20)
+    turtle.left(90)
+    turtle.down()
+
+    turtle.begin_fill()
+    turtle.circle(15 + (petal_piece*5))
+    turtle.end_fill()
+
+    turtle.up()
+    turtle.right(90)
+    turtle.backward(petal_piece * 20)
+    turtle.down()
+
+    petal_piece = petal_piece + 1
+</pycode>
+
+<markdown>
+## The Outer Loop – Drawing the Flower
+* The outer while loop uses the inner while loop 8 times, for 8 petals
+* Each petal has a different starting point, 50 pixels away from the center
+* The inner while loop draws five circles of a petal (this part is shown in the previous slide)
+* Here we go back to the starting point, the center
+* Each petal is drawn using a different angle by turning the turtle 45 degrees
+</markdown>
+
+<pycode>
+import turtle
+
+turtle.color("red")
+turtle.speed(10)
+
+petal = 0
+while petal < 8:
+    turtle.up()
+    turtle.forward(50)
+    turtle.down()
+
+    petal_piece = 0
+
+    while petal_piece < 5:
+        turtle.up()
+        turtle.forward(petal_piece * 20)
+        turtle.left(90)
+        turtle.down()
+
+        turtle.begin_fill()
+        turtle.circle(15 + (petal_piece*5))
+        turtle.end_fill()
+
+        turtle.up()
+        turtle.right(90)
+        turtle.backward(petal_piece * 20)
+        turtle.down()
+
+        petal_piece = petal_piece + 1
+    turtle.up()
+    turtle.backward(50)
+    turtle.down()
+
+    turtle.left(45)
+    petal = petal + 1
+</pycode>
+
+<markdown>
+## Stage 3 - Drawing the Flower Centre
+* The middle of the flower is drawn using a while loop, which draws a series of circles
+* We first draw the largest circle, then the smaller ones
+* We reduce the radius each time
+* If we reduced it by 3 pixels each time, we would get this.
+![image](https://user-images.githubusercontent.com/901975/64471809-77f7d980-d188-11e9-8d92-ee6b7acd41a2.png)
+* However, let’s make a more interesting pattern like the bottom:
+* We do that by increasing the size of the reduction for each successive circle
+
+</markdown>
+<pycode>
+import turtle
+
+turtle.speed(10)
+turtle.color("yellow")
+turtle.pencolor("black")
+
+radius = 60
+radius_reduction = 3
+
+while radius > 10:
+    turtle.up()
+    turtle.forward(radius)
+    turtle.left(90)
+    turtle.down()
+
+    turtle.begin_fill()
+    turtle.circle(radius)
+    turtle.end_fill()
+
+    turtle.up()
+    turtle.right(90)
+    turtle.backward(radius)
+    turtle.down()
+
+    radius = radius - radius_reduction
+    #radius_reduction = radius_reduction * 2
+</pycode>
+<markdown>
+## Hiding the Turtle
+* Sometimes the pictures in the turtle window will look better if the turtle is not visible inside the window
+* In our previous flower example, the turtle is in the middle of the flower when the drawing finishes
+* We hide the turtle near the end of the program using this line of code:
+  `turtle.hideturtle()`
+* After running the code, the turtle is then hidden in the final result
+</markdown>
+
+<pycode>
+import turtle
+
+turtle.speed(10)
+turtle.color("yellow")
+turtle.pencolor("black")
+
+radius = 60
+radius_reduction = 3
+
+while radius > 10:
+    turtle.up()
+    turtle.forward(radius)
+    turtle.left(90)
+    turtle.down()
+
+    turtle.begin_fill()
+    turtle.circle(radius)
+    turtle.end_fill()
+
+    turtle.up()
+    turtle.right(90)
+    turtle.backward(radius)
+    turtle.down()
+
+    radius = radius - radius_reduction
+    radius_reduction = radius_reduction * 2
+
+turtle.hideturtle()
+</pycode>
+
+<markdown>
+## Excercise
+* Put them all together
+* Make several flowers
+* Draw other types of flowers
+</markdown>
+<!-- EOC -->
+<!-- markdown -> html -->
+
+<script type="text/javascript">
+
+var markTags = document.getElementsByTagName("markdown");
+
+for (i = 0; i < markTags.length; i++) {
+    markTags[i].innerHTML = marked(markTags[i].innerHTML);
+}
+
+var codeHead = '<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">'
+             + '<textarea data-component="activecode" id="code_id" data-lang="python"  data-timelimit=25000 data-caption="">';
+var codeTail = '</textarea></div>';
+
+var codeTags = document.getElementsByTagName("pycode");
+for (i = 0; i < codeTags.length; i++) {
+    codeTags[i].innerHTML = codeHead + codeTags[i].innerHTML + codeTail;
+}
+
+</script>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+
+      | <a href="#">Back to top</a>
+
+    </p>
+    <p>
+    Created by Dan Schellenberg and Sung Kim. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
