@@ -154,180 +154,30 @@
 
 <div class="container" id="main-content">
 
-<!-- EDIT From here --->
-
 <markdown>
-# Using For Loops
+# Loops
 ### David Rossiter, Gibson Lam and Sung Kim
 
 ## Outcomes
 
 ### After completing this presentation, you are expected to be able to:
-1. Use the range command to make a range of numbers
-1. Write loops using the `for` command
-
-
-## Typical loops
-* `n` iterations
-* `print` 1 to 10
+1. Write loops using the while command
+1. Work with conditions using logical operators
+1. Write code using nested loops
 </markdown>
 
 <pycode>
-num = 1
-while num <= 10:
-  print (num)
-  num = num + 1
+import turtle
+
+turtle.circle(10)
+turtle.circle(20)
+turtle.circle(30)
+turtle.circle(40)
+turtle.circle(50)
+turtle.circle(60)
+turtle.circle(70)
 </pycode>
 
-<markdown>
-## Writing Loops Using For
-* Previously, we have discussed the use of while loops to do things repeatedly in Python
-* In this presentation, we will look at another way of doing loops, using for loops
-* Using a for loop:
-  * perform some actions a particular number of times, or:
-  * loop through a set of data, performing the same actions on every item in the set
-</markdown>
-<pycode>
-for num in range (1, 10):
-  print(num)
-</pycode>
-<markdown>
-## For Loops
-```
-for item in a list of items :
-     . . .statement(s). . .
-```
-
-## The Range Command
-* The range command creates a range of numbers
-* Make a range of numbers between 1 and 5 using the following code:
-  `range(1, 6)``
-* Returns a range of numbers which includes 1, 2, 3, 4 and 5
-</markdown>
-
-<pycode>
-print(list(range(1, 6)))
-
-print(list(range(5, 10))) # 5 to 9 (5 inclusive, but 9 exclusive)
-print(list(range(1, 11))) # 1 to 11 (1 inclusive, but 11 exclusive)
-
-print("default start is 0")
-print(list(range(10)))
-
-print("Step size is 2")
-print(list(range(0, 10, 2)))
-print(list(range(1, 10, 2)))
-
-print("Step size is 3")
-print(list(range(0, 10, 3)))
-</pycode>
-
-<markdown>
-## More examples
-</markdown>
-<pycode>
-print(range(-1,-10,-2))
-print(range(10, 1))
-print(range(-10, 1,-1))
-
-print(range(-10, 1, 1))
-print(range(-10, 1, 0))
-</pycode>
-
-<markdown>
-<markdown>
-## For Loops
-```
-for item in a list of items :
-     . . .statement(s). . .
-```
-
-* You need to give a list of items to a for loop
-* This is where the range command is commonly used
-* prints out a list of four numbers:
-* The end value means a space is put at the end of the number when it is printed, instead of moving to the next line
-  `print(i, end=" ")`
-</markdown>
-
-<pycode>
-for i in range(4):
-    print(i, end=" ")
-</pycode>
-
-<markdown>
-## Excercises
-* Print odd nemers from 0 to 100
-* Print numbers from 0 to 100 but not multiple of 3
-  * 0 1 4 5 7 8 10 11 13 ...
-</markdown>
-
-<pycode>
-for i in range( ):
-    print(i, end=" ")
-</pycode>
-
-<markdown>
-## Using a ‘Fixed’ List in a For Loop
-* For loop is an iterator or any given list, `[1, 4, -4, 2]`
-* We can make a string list, `["apple", "banana", "cherry"]`
-</markdown>
-
-<pycode>
-for i in [1, 4, -4, 2]:
-    print(i, end=" ")
-</pycode>
-
-<pycode>
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:
-    print("I like", fruit)
-</pycode>
-
-<markdown>
-## Nested for loops
-</markdown>
-
-<pycode>
-# Example from w3school
-adj = ["red", "big", "tasty"]
-fruits = ["apple", "banana", "cherry"]
-for a in adj:
-  for f in fruits:
-    print(a, f)
-</pycode>
-
-<markdown>
-## Using a String in a For Loop
-* A string will be changed into a list of letters automatically when it is used in a for loop
-* String "Wild hair" becomes  `["W","i","l","d"," ","h","a","i","r"]`
-</markdown>
-<pycode>
-for i in "This is Sung!":
-    print(i, end="*")
-</pycode>
-
-<markdown>
-## Excercise
-* Replace `s` to `x`
-</markdown>
-
-<pycode>
-for i in "This is Sung!":
-    if i is 's':
-        print('x', end="")
-    else:
-        print(i, end="")
-</pycode>
-
-<markdown>
-## More Excercise
-* Add 1 to 100
-* Add even numbers from 10 to 1000
-* Add two spaces between words
-* Reverse string
-* Rewrite the turtle race using for loops
-![image](https://user-images.githubusercontent.com/901975/64474918-ffa40f00-d1ad-11e9-862c-3b5622c8281e.png)
-</markdown>
 
 <!-- EOC -->
 <!-- markdown -> html -->
