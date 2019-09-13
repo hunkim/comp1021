@@ -155,7 +155,7 @@
 <div class="container" id="main-content">
 
 <markdown>
-# Loops
+# Loops Recap
 ### David Rossiter, Gibson Lam and Sung Kim
 
 ## Outcomes
@@ -164,8 +164,179 @@
 1. Write loops using the while command
 1. Work with conditions using logical operators
 1. Write code using nested loops
+
+## Recap
+* while loop condition
+* init conditions
+* condition changes
 </markdown>
 
+<iframe src="https://app.sli.do/event/mnc2cikl/embed/polls/2026446" width="500" height="300"></iframe>
+
+<markdown>
+## Loops with numbers
+* Add 0 to 10
+* Multiply numbers from 0 to 10
+* Add odd numbers from 0 to 10
+* Add multiples of 3 from 0 to 10
+* Add multiples of 3, 4, and 5 from 0 to 1000
+
+</markdown>
+
+<pycode>
+# Add 0 to 10
+index = 0
+sum = 0
+
+while index <= 10:
+    sum = sum + index
+    index = index + 1
+
+print("Sum =", sum)
+</pycode>
+
+<pycode>
+# Multiply numbers from 0 to 10
+index = 0
+mul = 0
+
+while index <= 10:
+    mul = mul * index
+    index = index + 1
+
+print("Mul =", mul)
+</pycode>
+
+<pycode>
+# Add odd numbers from 0 to 10
+index = 1
+sum = 0
+
+while index <= 10:
+    sum = sum + index
+    index = index + 2
+
+print("Odd Sum =", sum)
+</pycode>
+
+<pycode>
+# Add odd numbers from 0 to 10
+# Using modular operator, %
+index = 0
+sum = 0
+
+while index <= 10:
+    if index % 2 != 0:
+        sum = sum + index
+        print("Odd = ", index)
+    index = index + 1
+
+print("Odd Sum =", sum)
+</pycode>
+
+<pycode>
+# Add multiples of 3 from 0 to 10
+# Using modular operator, %
+index = 0
+sum = 0
+
+while index <= 10:
+    if index % 3 == 0:
+        sum = sum + index
+        print("multiple of 3 = ", index)
+    index = index + 1
+
+print("multiple of 3, Sum =", sum)
+</pycode>
+
+
+<pycode>
+# Add multiples of 3, 4, and 5 from 0 to 1000
+# Using modular operator, %
+index = 0
+sum = 0
+
+while index <= 1000:
+    if index % 3 == 0 and index % 4 == 0 and index % 5 == 0:
+        sum = sum + index
+        print("multiple of 3, 4, and 5 = ", index)
+    index = index + 1
+
+print("multiple of 3, 4, and 5, Sum =", sum)
+</pycode>
+
+
+<pycode>
+"""
+Add multiples of 3, 4, and 5 from 0 to 1000
+Using modular operator, %
+And nested loops
+"""
+index = 0
+sum = 0
+
+while index <= 1000:
+    is_multiple_of_3_4_5 = True
+
+    """
+    ...
+    """
+    if is_multiple_of_3_4_5:
+        sum = sum + index
+        print("multiple of 3 = ", index)
+    index = index + 1
+
+print("multiple of 3, 4, and 5, Sum =", sum)
+</pycode>
+
+<pycode>
+"""
+Add multiples of 3, 4, and 5 from 0 to 1000
+Using modular operator, %
+And nested loops
+"""
+index = 0
+sum = 0
+
+while index <= 1000:
+    is_multiple_of_3_4_5 = True
+
+    index2 = 3
+    while index2 <=5:
+       is_multiple_of_3_4_5 = is_multiple_of_3_4_5 and index % index2 == 0
+       index2 = index2 +1
+
+    if is_multiple_of_3_4_5:
+        sum = sum + index
+        print("multiple of 3 = ", index)
+    index = index + 1
+
+print("multiple of 3, 4, and 5, Sum =", sum)
+</pycode>
+
+
+<markdown>
+## Quiz: Add prime numbers from 1 to 100
+</markdown>
+<iframe src="https://app.sli.do/event/mnc2cikl/embed/polls/2026448" width="500" height="300"></iframe>
+<pycode>
+# This code is hard. It will take time to understand this.
+sum = 0
+index = 1
+while index <= 100:
+    is_prime = True
+    index2 = 2
+    while index2 < index:
+        is_prime = is_prime and index % index2 != 0
+        index2 = index2 + 1
+
+    if is_prime:
+        print("Prime: ", index)
+        sum = sum + index
+    index = index + 1
+
+print("Sum = " , sum)
+</pycode>
 <pycode>
 import turtle
 
@@ -571,6 +742,8 @@ turtle.write("The winner is XXX!")
 * More fun games?
 * Nested loops?
 </markdown>
+
+<iframe src="https://app.sli.do/event/mnc2cikl/embed/polls/2026561" width="500" height="400" scrolling="no"></iframe>
 
 <!-- EOC -->
 <!-- markdown -> html -->
