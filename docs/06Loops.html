@@ -171,6 +171,68 @@
 * condition changes
 </markdown>
 
+<pycode>
+import turtle
+
+turtle.circle(10)
+turtle.circle(20)
+turtle.circle(30)
+turtle.circle(40)
+turtle.circle(50)
+turtle.circle(60)
+turtle.circle(70)
+</pycode>
+
+<markdown>
+## Loops: Do this many times
+* You can write loops in Python to do things repeatedly
+* Looping is a very useful feature because it makes repetitive work easier
+
+## Run till Sunset
+* Run while sun is up
+![image](https://user-images.githubusercontent.com/901975/64469103-33a41380-d15f-11e9-90f7-1f1c253b5a74.png)
+
+## While Loops
+
+```python
+while <condition>
+   ... statement(s) ...
+```
+
+* While condition is true, repeatedly execute `statement(s)`
+* A statement is a Python instruction
+* When condition is false, the while loop finishes
+
+# The Flow of a While Loop
+![image](https://user-images.githubusercontent.com/901975/64469139-aca36b00-d15f-11e9-976f-95b779cbf203.png)
+</markdown>
+
+<pycode>
+import turtle
+
+while True:
+    turtle.circle(30)
+</pycode>
+
+<pycode>
+import turtle
+
+start = 10
+while start < 70:
+    turtle.circle(30)
+    start = start + 10
+</pycode>
+
+<pycode>
+import turtle
+
+start = 10
+while start < 70:
+    turtle.circle(start)
+    start = start + 10
+</pycode>
+
+
 <iframe src="https://app.sli.do/event/mnc2cikl/embed/polls/2026446" width="500" height="300"></iframe>
 
 <markdown>
@@ -336,66 +398,6 @@ while index <= 100:
     index = index + 1
 
 print("Sum = " , sum)
-</pycode>
-<pycode>
-import turtle
-
-turtle.circle(10)
-turtle.circle(20)
-turtle.circle(30)
-turtle.circle(40)
-turtle.circle(50)
-turtle.circle(60)
-turtle.circle(70)
-</pycode>
-
-<markdown>
-## Loops: Do this many times
-* You can write loops in Python to do things repeatedly
-* Looping is a very useful feature because it makes repetitive work easier
-
-## Run till Sunset
-* Run while sun is up
-![image](https://user-images.githubusercontent.com/901975/64469103-33a41380-d15f-11e9-90f7-1f1c253b5a74.png)
-
-## While Loops
-
-```python
-while <condition>
-   ... statement(s) ...
-```
-
-* While condition is true, repeatedly execute `statement(s)`
-* A statement is a Python instruction
-* When condition is false, the while loop finishes
-
-# The Flow of a While Loop
-![image](https://user-images.githubusercontent.com/901975/64469139-aca36b00-d15f-11e9-976f-95b779cbf203.png)
-</markdown>
-
-<pycode>
-import turtle
-
-while True:
-    turtle.circle(30)
-</pycode>
-
-<pycode>
-import turtle
-
-start = 10
-while start < 70:
-    turtle.circle(30)
-    start = start + 10
-</pycode>
-
-<pycode>
-import turtle
-
-start = 10
-while start < 70:
-    turtle.circle(start)
-    start = start + 10
 </pycode>
 
 <markdown>
