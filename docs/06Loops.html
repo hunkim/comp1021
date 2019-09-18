@@ -699,6 +699,39 @@ while start_x <= 150:
 </pycode>
 
 <markdown>
+## Optional: toggle a value
+![image](https://user-images.githubusercontent.com/901975/65189781-7a213880-daa4-11e9-83e5-1971f3dfa5da.png)
+See more at https://stackoverflow.com/questions/8381735/how-to-toggle-a-value-in-python
+</markdown>
+
+<pycode>
+import turtle
+turtle.speed(10)
+
+start_x = -150
+
+switch = True
+while start_x <= 150:
+  turtle.penup()
+
+  start_y = -150
+  while start_y<=150:
+    turtle.goto(start_x, start_y)
+    start_y = start_y + 10
+    if switch is True:
+      start_x = start_x +5
+    else:
+      start_x = start_x -5
+
+    # toggle
+    switch = not switch
+
+    turtle.pendown()
+
+  start_x = start_x + 30
+</pycode>
+
+<markdown>
 ## All together
 </markdown>
 <pycode>
