@@ -123,7 +123,7 @@
 <!-- Begin navbar -->
 <div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
 
-  <div class="container">
+  <div class="container-fluid">
 
     <div class="navbar-header">
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -402,8 +402,37 @@ print("Sum = " , sum)
 </pycode>
 
 <markdown>
+## Recap
+* while loop
+* nested while loop
+* loop operations
+ * sum = sum + i
+ * mul = mul * i
+ * is_prime = is_prime and condition
+</markdown>
+<pycode>
+# This code is hard. It will take time to understand this.
+sum = 0
+i = 2 # 1 is not a prime
+while i <= 100:
+    is_prime = True
+
+    i2 = 2
+    while i2 < index:
+        is_prime = is_prime and (i % i2) != 0
+        i2 = i2 + 1
+
+    if is_prime:
+        print("Prime: ", index)
+        sum = sum + i
+    i = i + 1
+
+print("Sum = " , sum)
+</pycode>
+<markdown>
 ## My turtle
 * create my own turtle.
+* with different shape and color
 </markdown>
 
 <pycode>
@@ -439,6 +468,8 @@ tur1.write("I am at -100,-100")
 <markdown>
 ## Turtle race
 * Let's race with my turtle
+* Make it move from -150 to 150 by 10 steps
+* Sounds like a loop?
 </markdown>
 
 <pycode>
@@ -453,13 +484,16 @@ tur1.color('blue')
 tur1.shape('turtle')
 
 tur1.penup()
-# tur1.pendown()
 
 while start_x < 150:
   tur1.goto(start_x, start_y)
   start_x = start_x + 10
 </pycode>
-
+<markdown>
+## Random move?
+* Alwaus moving 10 steps is boring.
+* Can we move a random step?
+</markdown>
 <pycode>
 import turtle
 import random
@@ -482,6 +516,10 @@ while start_x < 150:
 
 <markdown>
 ## Multiple turtles
+* Can we go with three turtles?
+ * with different colors
+ * with different starting point (same X, but different Y)
+ * with different random steps
 </markdown>
 
 <pycode>
@@ -529,6 +567,7 @@ while tur1_start_x < 150:
 <markdown>
 ## When to Stop
 * When one of them is finished (at 150)
+* How can we say that in python?
 ```python
  while cond1 and cond2 and cond3:
 ```
@@ -594,9 +633,13 @@ start_x = -150
 
 while start_x <= 150:
   turtle.penup()
+
+  # Move to the bottom
   turtle.goto(start_x, -150)
+  # Draw a line to up
   turtle.pendown()
   turtle.goto(start_x, 150)
+
   start_x = start_x + 30
 </pycode>
 
@@ -615,11 +658,41 @@ start_x = -150
 
 while start_x <= 150:
   turtle.penup()
-  start_y = -150
 
+  start_y = -150
   while start_y<=150:
     turtle.goto(start_x, start_y)
-    start_y = start_y + 150
+    start_y = start_y + 10
+    turtle.pendown()
+
+  start_x = start_x + 30
+</pycode>
+<markdown>
+## Zigzeg Lines?
+* straight Line is boring
+* Let draw Zigzag Lines to make our turtles confusing
+* How can we do in the for loop?
+
+![image](https://user-images.githubusercontent.com/901975/65154366-f9d7e480-da5d-11e9-81ca-26268146c56a.png)
+</markdown>
+<pycode>
+import turtle
+turtle.speed(10)
+
+start_x = -150
+
+while start_x <= 150:
+  turtle.penup()
+
+  start_y = -150
+  while start_y<=150:
+    turtle.goto(start_x, start_y)
+    start_y = start_y + 10
+    if start_y % 20 == 0: # 20, 40, 60, ...
+      start_x = start_x +5
+    else:
+      start_x = start_x -5
+
     turtle.pendown()
 
   start_x = start_x + 30
@@ -748,6 +821,11 @@ turtle.write("The winner is XXX!")
 
 <iframe src="https://app.sli.do/event/mnc2cikl/embed/polls/2026561" width="500" height="400" scrolling="no"></iframe>
 
+<markdown>
+# TA: Jaeboum Kim
+![image](https://user-images.githubusercontent.com/901975/65155945-c185d580-da60-11e9-98b2-17da722cfb71.png)
+
+</markdown>
 <!-- EOC -->
 <!-- markdown -> html -->
 
@@ -759,7 +837,7 @@ for (i = 0; i < markTags.length; i++) {
     markTags[i].innerHTML = marked(markTags[i].innerHTML);
 }
 
-var codeHead = '<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">'
+var codeHead = '<div data-childcomponent="wdtpd_turtle_assn_4" class="container-fluid runestone explainer ac_section alert alert-warning">'
              + '<textarea data-component="activecode" id="code_id" data-lang="python"  data-timelimit=25000 data-caption="">';
 var codeTail = '</textarea></div>';
 
