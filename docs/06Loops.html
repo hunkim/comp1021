@@ -724,18 +724,20 @@ while start_x <= 150:
 
   start_y = -150
   while start_y<=150:
-    start_y = start_y + 10
-
-  if switch is True:
+    
+    if switch is True:
       turtle.goto(start_x + 5, start_y)
-  else:
+    else:
       turtle.goto(start_x - 5, start_y)
 
+  
+  
     # toggle
     switch = not switch
-
+    
+    start_y = start_y + 10
     turtle.pendown()
-
+  
   start_x = start_x + 30
 </pycode>
 
