@@ -158,7 +158,7 @@
 
 <markdown>
 # Using For Loops
-# http://10.c1020.fun
+# http://10.c1021.fun
 ### David Rossiter, Gibson Lam and Sung Kim
 
 ## Outcomes
@@ -170,11 +170,11 @@
 
 ## Typical loops
 * `n` iterations
-* `print` 1 to 9
+* `print` 0 to 9
 </markdown>
 
 <pycode>
-num = 1
+num = 0
 while num < 10:
   print (num)
   num = num + 1
@@ -431,6 +431,7 @@ turtle.hideturtle()
 </pycode>
 
 <markdown>
+# http://10.c1021.fun
 ![image](https://user-images.githubusercontent.com/901975/65473115-0c607c80-dea9-11e9-9d25-91da842767c8.png)
 </markdown>
 <iframe src="https://app.sli.do/event/mnc2cikl/embed/polls/2071647" width="300" height="400"></iframe>
@@ -464,7 +465,244 @@ for i in range(7):
 turtle.hideturtle()
 </pycode>
 
+<pycode>
+# Print with end
+
+for i in range(5):
+  print(i)
+
+for i in range(5):
+  print(i, end=":")
+
+for i in range(5):
+  print(i, end=" OK ")
+
+print("")
+for i in range(5):
+  print("*", end="")
+
+</pycode>
+
 <markdown>
+![image](https://user-images.githubusercontent.com/901975/65555061-fa8ce100-df5d-11e9-8340-d7ffe86590bf.png)
+</markdown>
+
+<pycode>
+# Five star
+for i in range(1, 6):
+    for j in range(i):
+        print ('* ', end="")
+    print('')
+
+</pycode>
+
+<markdown>
+![image](https://user-images.githubusercontent.com/901975/65555093-16908280-df5e-11e9-99f4-c9a0051821aa.png)
+</markdown>
+
+<pycode>
+n=5;
+
+for i in range(n,0,-1):
+    for j in range(i):
+        print('* ', end="")
+    print('')
+</pycode>
+<markdown>
+![image](https://user-images.githubusercontent.com/901975/65555128-358f1480-df5e-11e9-92df-8d71f08c13df.png)
+</markdown>
+
+<pycode>
+n=5;
+for i in range(n):
+    for j in range(i):
+        print ('* ', end="")
+    print('')
+
+for i in range(n,0,-1):
+    for j in range(i):
+        print('* ', end="")
+    print('')
+</pycode>
+
+
+<pycode>
+# Can you do with one loop?
+for i in range(11):
+
+
+    for j in range(i):
+        print ('* ', end="")
+    print('')
+
+
+
+
+</pycode>
+
+<pycode>
+# Can you do with one loop?
+for i in range(11):
+    jj = i
+    if i>5:
+        jj = 10 - i
+    for j in range(jj):
+        print ('* ', end="")
+    print('')
+
+</pycode>
+
+<markdown>
+## Python magic: str * input
+</markdown>
+<pycode>
+print("hi" * 5)
+print("* " * 3)
+</pycode>
+
+<markdown>
+```
+#
+# #
+# # #
+# # # #
+# # # # #
+```
+</markdown>
+
+<pycode>
+# Five star
+for i in range(1, 6):
+  print ('# ' * i)
+</pycode>
+
+<markdown>
+![image](https://user-images.githubusercontent.com/901975/65555572-95d28600-df5f-11e9-9714-9321214a9356.png)
+</markdown>
+
+<pycode>
+# Seven pyramind
+for i in range(8):
+    print(" " * i, end = "")
+    for j in range(i):
+        print ("* ", end="")
+    print('')
+
+</pycode>
+
+
+<pycode>
+# Seven pyramind with str * int
+for i in range(8):
+    print(" " * (7-i), end = "")
+    print ("* " * i)
+</pycode>
+
+<markdown>
+# Lists and Tuples
+* After completing this presentation, you are expected to be able to:
+ * Manage a collection of things using a list or a tuple in Python
+ * Explain the major difference between lists and tuples
+ * Create a two dimensional structure using lists or tuples
+
+## Dealing with scores
+* Three student scores: 91, 80, 99.
+* print their scores
+* find the max and min scores
+</markdown>
+<pycode>
+s1 = 91
+s2 = 80
+s3 = 99
+
+print(s1, s2, s3)
+
+# Find max
+
+# Find min
+</pycode>
+
+<markdown>
+## 7 Student Scores
+* 92, 96, 89, 78, 99, 88, 100
+* print, find max, find min
+* sorting
+* change it to letter grade
+* ...
+
+
+![image](https://d24fkeqntp1r7r.cloudfront.net/wp-content/uploads/2019/04/30075227/shutterstock_1010935825-2.jpg)
+</markdown>
+
+<pycode>
+score = [92, 96, 89, 78, 99, 88, 100]
+print("length", len(score))
+print("score 0", score[0])
+print("score 3", score[3])
+print("score 8", score[8])
+</pycode>
+
+<pycode>
+score = [92, 96, 89, 78, 99, 88, 100]
+length = len(score)
+
+for i in range(0, length):
+  print(score[i])
+</pycode>
+<pycode>
+# Find MAX
+score = [92, 96, 89, 78, 99, 88, 100]
+length = len(score)
+
+# put a small number
+max = 0
+
+for i in range(0, length):
+  if score[i] > max:
+    max = score[i]
+
+print("Max score is", max)
+
+</pycode>
+<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=%23%20Find%20MAX%0Ascore%20%3D%20%5B92,%2096,%2089,%2078,%2099,%2088,%20100%5D%0Alength%20%3D%20len%28score%29%0A%0A%23%20put%20a%20small%20number%0Amax%20%3D%200%0A%0Afor%20i%20in%20range%280,%20length%29%3A%0A%20%20if%20score%5Bi%5D%20%3E%20max%3A%0A%20%20%20%20max%20%3D%20score%5Bi%5D%0A%0Aprint%28%22Max%20score%20is%22,%20max%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+<pycode>
+score = [92, 96, 89, 78, 99, 88, 100]
+
+for s in score:
+  print(s)
+</pycode>
+
+<pycode>
+# Find MAX
+score = [92, 96, 89, 78, 99, 88, 100]
+
+# put a small number
+max = 0
+
+for s in score:
+  if s > max:
+    max = s
+
+print("Max score is", max)
+</pycode>
+
+<pycode>
+# Find Min
+score = [92, 96, 89, 78, 99, 88, 100]
+
+for s in score:
+
+print("min score is", )
+</pycode>
+
+<markdown>
+## List Exercises
+* Find avg
+* Find median value
+ * If there is an even number of observations, then there is no single middle value; the median is then usually defined to be the mean of the two middle values.
+* More list exercises at https://www.w3resource.com/python-exercises/list/
+
 ## The Range Command
 * The range command creates a range of numbers
 * Make a range of numbers between 1 and 5 using the following code:
@@ -493,15 +731,14 @@ print(list(range(0, 10, 3)))
 ## More examples
 </markdown>
 <pycode>
-print(range(-1,-10,-2))
-print(range(10, 1))
-print(range(-10, 1,-1))
+print(list(range(-1,-10,-2)))
+print(list(range(10, 1)))
+print(list(range(-10, 1,-1)))
 
-print(range(-10, 1, 1))
-print(range(-10, 1, 0))
+print(list(range(-10, 1, 1)))
+print(list(range(-10, 1, 0)))
 </pycode>
 
-<markdown>
 <markdown>
 ## For Loops
 ```
@@ -587,11 +824,66 @@ for i in "This is Sung!":
 </pycode>
 
 <markdown>
+## More examples
+* https://www.geeksforgeeks.org/python-list/
+
+## Break and Continue
+* https://www.programiz.com/python-programming/break-continue
+
+![image](https://user-images.githubusercontent.com/901975/65563406-0d161300-df7c-11e9-89d7-e79f41e405b7.png)
+
+![image](https://user-images.githubusercontent.com/901975/65563319-c6c0b400-df7b-11e9-8b9d-a3ca5ade09f2.png)
+
+![iamge](https://cdn.programiz.com/sites/tutorial2program/files/how-break-statement-works.jpg)
+</markdown>
+
+<pycode>
+# Use of break statement inside loop
+for s in "lovesung":
+  if s == 's':
+    break
+
+  print(s)
+
+print("The end")
+</pycode>
+<markdown>
+![image](https://cdn.programiz.com/sites/tutorial2program/files/how-continue-statment-works.jpg)
+</markdown>
+
+<pycode>
+# Use of continue statement inside loop
+for s in "lovesung":
+  if s == 's':
+    continue
+
+  print(s)
+
+print("The end")
+</pycode>
+
+<pycode>
+# Prime using for
+sum = 0
+for i in range (2, 100):
+    is_prime = True
+    for j in range(3, i):
+      if i%j == 0:
+        is_prime = False
+
+    if is_prime:
+        print("Prime: ", i)
+        sum = sum + i
+
+print("Sum = " , sum)
+</pycode>
+<markdown>
 ## More Excercise
 * Add 1 to 100
 * Add even numbers from 10 to 1000
 * Add two spaces between words
 * Reverse string
+* Write prime number sum using `if` and `break`
 * Rewrite the turtle race using for loops
 ![image](https://user-images.githubusercontent.com/901975/64474918-ffa40f00-d1ad-11e9-862c-3b5622c8281e.png)
 </markdown>
