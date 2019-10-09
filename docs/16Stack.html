@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!-- Original: http://opensask.ca/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>COMP1021</title>
+    <link rel="stylesheet" href="static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '/',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="static/runestonebase.js"></script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="static/bookfuncs.js"></script>
+    <script type="text/javascript" src="static/codemirror.js"></script>
+    <script type="text/javascript" src="static/xml.js"></script>
+    <script type="text/javascript" src="static/css.js"></script>
+    <script type="text/javascript" src="static/htmlmixed.js"></script>
+    <script type="text/javascript" src="static/python.js"></script>
+    <script type="text/javascript" src="static/javascript.js"></script>
+    <script type="text/javascript" src="static/activecode.js"></script>
+    <script type="text/javascript" src="static/skulpt.min.js"></script>
+    <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="static/clike.js"></script>
+    <script type="text/javascript" src="static/timed_activecode.js"></script>
+    <script type="text/javascript" src="static/animationbase.js"></script>
+    <script type="text/javascript" src="static/mchoice.js"></script>
+    <script type="text/javascript" src="static/timedmc.js"></script>
+    <script type="text/javascript" src="static/timed.js"></script>
+    <script type="text/javascript" src="static/clickable.js"></script>
+    <script type="text/javascript" src="static/timedclickable.js"></script>
+    <script type="text/javascript" src="static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="static/pytutor.js"></script>
+    <script type="text/javascript" src="static/codelens.js"></script>
+    <script type="text/javascript" src="static/skulpt.min.js"></script>
+    <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="static/datafile.js"></script>
+    <script type="text/javascript" src="static/dragndrop.js"></script>
+    <script type="text/javascript" src="static/timeddnd.js"></script>
+    <script type="text/javascript" src="static/fitb.js"></script>
+    <script type="text/javascript" src="static/timedfitb.js"></script>
+    <script type="text/javascript" src="static/lib/prettify.js"></script>
+    <script type="text/javascript" src="static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="static/parsons.js"></script>
+    <script type="text/javascript" src="static/timedparsons.js"></script>
+    <script type="text/javascript" src="static/poll.js"></script>
+    <script type="text/javascript" src="static/reveal.js"></script>
+    <script type="text/javascript" src="static/shortanswer.js"></script>
+    <script type="text/javascript" src="static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="static/showEval.js"></script>
+    <script type="text/javascript" src="static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="static/jquery-fix.js"></script>
+    <script type="text/javascript" src="static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="static/waypoints.min.js"></script>
+    <script type="text/javascript" src="static/rangy-core.js"></script>
+    <script type="text/javascript" src="static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="static/user-highlights.js"></script>
+    <script type="text/javascript" src="static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="static/jquery-migrate-1.2.1.min.js"></script>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("static/img/logo_smallx.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand">COMP1021 - Introduction to Computer Science</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<div class="container" id="main-content">
+
+<!-- EDIT From here --->
+
+<markdown>
+# Stack (LIFO) and FIFO
+# http://16.c1021.fun
+### David Rossiter, Gibson Lam and Sung Kim
+
+## Outcomes
+
+### After completing this presentation, you are expected to be able to:
+1. Explain the stack structure and its push and pop operations
+1. Implement a stack using Python code
+
+
+## What is a Stack?
+* A stack is a special kind of data structure
+* It is used to store a collection of things
+* Sometimes it is a called a Last In First Out (LIFO) structure, because of the way it works
+![image](https://user-images.githubusercontent.com/901975/66490110-3c339500-eae3-11e9-8df5-309f8b12f71b.png)
+## Stack Operations
+* There are two operations for a stack:
+* Push: It adds a new item to the top of the stack
+* Pop: It takes the top item off the stack
+![image](https://user-images.githubusercontent.com/901975/66490276-7dc44000-eae3-11e9-9abe-36bfd22d6fcf.png)
+## An Illustration of a Stack
+![image](https://user-images.githubusercontent.com/901975/66490325-8f0d4c80-eae3-11e9-8dec-9e93db2bb757.png)
+
+## Using the Stack in Python
+* Any Python list is a stack
+* There are two built-in functions for a Python list:
+ * `list.append()`  (this is the Python word for ‘push’)
+ * `list.pop()`
+
+* The append operation is used to add a new item to the end of the list (= the top of the stack)
+* The pop operation is used to remove and return the last element in the list (= the top of the stack)
+</markdown>
+
+<pycode>
+# Create a list with two numbers in it
+numbers = [];
+print("The numbers in the list are", numbers)
+
+numbers.append(33)
+numbers.append(44)
+numbers.append(55)
+print("Now, the numbers in the list are", numbers)
+
+print("POP", numbers.pop())
+print("POP", numbers.pop())
+print("Now, the numbers in the list are", numbers)
+
+</pycode>
+
+<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=%23%20Create%20a%20list%20with%20two%20numbers%20in%20it%0Anumbers%20%3D%20%5B%5D%3B%0Aprint%28%22The%20numbers%20in%20the%20list%20are%22,%20numbers%29%0A%0Anumbers.append%2833%29%0Anumbers.append%2844%29%0Anumbers.append%2855%29%0Anumbers.append%2877%29%0Aprint%28%22Now,%20the%20numbers%20in%20the%20list%20are%22,%20numbers%29%0A%0Aprint%28%22POP%22,%20numbers.pop%28%29%29%0Aprint%28%22POP%22,%20numbers.pop%28%29%29%0Aprint%28%22Now,%20the%20numbers%20in%20the%20list%20are%22,%20numbers%29%0Aprint%28%22POP%22,%20numbers.pop%28%29%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+<markdown>
+http://pythontutor.com/visualize.html#code=%23%20Create%20a%20list%20with%20two%20numbers%20in%20it%0Anumbers%20%3D%20%5B%5D%3B%0Aprint%28%22The%20numbers%20in%20the%20list%20are%22,%20numbers%29%0A%0Anumbers.append%2833%29%0Anumbers.append%2844%29%0Anumbers.append%2855%29%0Anumbers.append%2877%29%0Aprint%28%22Now,%20the%20numbers%20in%20the%20list%20are%22,%20numbers%29%0A%0Aprint%28%22POP%22,%20numbers.pop%28%29%29%0Aprint%28%22POP%22,%20numbers.pop%28%29%29%0Aprint%28%22Now,%20the%20numbers%20in%20the%20list%20are%22,%20numbers%29%0Aprint%28%22POP%22,%20numbers.pop%28%29%29%0A&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
+
+## Stack examples
+* See https://cseducators.stackexchange.com/questions/791/what-are-some-good-examples-of-using-a-stack-data-structure
+
+### Check whether a string of parentheses is balanced or not.
+
+For example, return True for these input strings:
+```
+(()())
+([]{{}}[])
+```
+but False for these strings:
+```
+(()
+([)(])
+```
+</markdown>
+
+<pycode>
+def balanced(string):
+  ...
+  return False
+  ...
+  return True
+</pycode>
+<markdown>
+## Stack?
+</markdown>
+
+<pycode>
+def balanced(string):
+  stack=[]
+  for s in string:
+    if s == "(":
+      stack.append(s)
+    elif s == ")":
+      pop = stack.pop()
+      if pop != "(":
+        return False
+
+  return True
+
+print(balanced("(()())"))
+print(balanced("(())"))
+print(balanced("(()"))
+print(balanced("())()"))
+</pycode>
+
+<!-- EOC -->
+<!-- markdown -> html -->
+
+<script type="text/javascript">
+
+var markTags = document.getElementsByTagName("markdown");
+
+for (i = 0; i < markTags.length; i++) {
+    markTags[i].innerHTML = marked(markTags[i].innerHTML);
+}
+
+var codeHead = '<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">'
+             + '<textarea data-component="activecode" id="code_id" data-lang="python"  data-timelimit=25000 data-caption="">';
+var codeTail = '</textarea></div>';
+
+var codeTags = document.getElementsByTagName("pycode");
+for (i = 0; i < codeTags.length; i++) {
+    codeTags[i].innerHTML = codeHead + codeTags[i].innerHTML + codeTail;
+}
+
+</script>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+
+      | <a href="#">Back to top</a>
+
+    </p>
+    <p>
+    Created by Dan Schellenberg and Sung Kim. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
