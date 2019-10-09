@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!-- Original: http://opensask.ca/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>COMP1021</title>
+    <link rel="stylesheet" href="static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '/',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="static/runestonebase.js"></script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="static/bookfuncs.js"></script>
+    <script type="text/javascript" src="static/codemirror.js"></script>
+    <script type="text/javascript" src="static/xml.js"></script>
+    <script type="text/javascript" src="static/css.js"></script>
+    <script type="text/javascript" src="static/htmlmixed.js"></script>
+    <script type="text/javascript" src="static/python.js"></script>
+    <script type="text/javascript" src="static/javascript.js"></script>
+    <script type="text/javascript" src="static/activecode.js"></script>
+    <script type="text/javascript" src="static/skulpt.min.js"></script>
+    <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="static/clike.js"></script>
+    <script type="text/javascript" src="static/timed_activecode.js"></script>
+    <script type="text/javascript" src="static/animationbase.js"></script>
+    <script type="text/javascript" src="static/mchoice.js"></script>
+    <script type="text/javascript" src="static/timedmc.js"></script>
+    <script type="text/javascript" src="static/timed.js"></script>
+    <script type="text/javascript" src="static/clickable.js"></script>
+    <script type="text/javascript" src="static/timedclickable.js"></script>
+    <script type="text/javascript" src="static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="static/pytutor.js"></script>
+    <script type="text/javascript" src="static/codelens.js"></script>
+    <script type="text/javascript" src="static/skulpt.min.js"></script>
+    <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="static/datafile.js"></script>
+    <script type="text/javascript" src="static/dragndrop.js"></script>
+    <script type="text/javascript" src="static/timeddnd.js"></script>
+    <script type="text/javascript" src="static/fitb.js"></script>
+    <script type="text/javascript" src="static/timedfitb.js"></script>
+    <script type="text/javascript" src="static/lib/prettify.js"></script>
+    <script type="text/javascript" src="static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="static/parsons.js"></script>
+    <script type="text/javascript" src="static/timedparsons.js"></script>
+    <script type="text/javascript" src="static/poll.js"></script>
+    <script type="text/javascript" src="static/reveal.js"></script>
+    <script type="text/javascript" src="static/shortanswer.js"></script>
+    <script type="text/javascript" src="static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="static/showEval.js"></script>
+    <script type="text/javascript" src="static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="static/jquery-fix.js"></script>
+    <script type="text/javascript" src="static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="static/waypoints.min.js"></script>
+    <script type="text/javascript" src="static/rangy-core.js"></script>
+    <script type="text/javascript" src="static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="static/user-highlights.js"></script>
+    <script type="text/javascript" src="static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="static/jquery-migrate-1.2.1.min.js"></script>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("static/img/logo_smallx.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand">COMP1021 - Introduction to Computer Science</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<div class="container" id="main-content">
+
+<!-- EDIT From here --->
+
+<markdown>
+# L-System Computer Graphics with Def
+# http://15.c1021.fun
+### David Rossiter, Gibson Lam and Sung Kim
+
+## Outcomes
+
+### After completing this presentation, you are expected to be able to:
+1. Understanding modularization using def
+1. Fun L-System
+
+
+## Graphics Programming
+* We know about using turtle graphics to generate ‘simple’ computer graphics
+* In this presentation we will look at a more advanced approach called ‘L-system’
+* L-system is short for ‘Lindenmayer system’
+
+![image](https://user-images.githubusercontent.com/901975/66462604-07591b00-eaae-11e9-817c-a7d62cafc048.png)
+
+* There are many special images that can be created using this system
+
+![image](https://user-images.githubusercontent.com/901975/66462674-28217080-eaae-11e9-9cfa-586164c19c6b.png)
+![image](https://user-images.githubusercontent.com/901975/66462720-425b4e80-eaae-11e9-8b69-fce83ceb366e.png)
+![image](https://user-images.githubusercontent.com/901975/66462730-4dae7a00-eaae-11e9-8e32-1bd3c491a48e.png)
+![image](https://user-images.githubusercontent.com/901975/66462787-6585fe00-eaae-11e9-89f2-5bef877b4d61.png)
+## Basic Idea of L-System
+* The system starts from an initial image, which is typically a simple one
+* The system then repeatedly lets the image grow into a slightly more complex one based on some given rules
+* Each time the image grows, we say it has completed an iteration
+* The system stops when the desired number of iterations has been reached
+
+![image](https://user-images.githubusercontent.com/901975/66462905-96fec980-eaae-11e9-9bbb-ee920fe8d7f4.png)
+
+## Example Growing of a Tree
+* Here is an example of growing a tree
+* The tree starts with a branch (i.e. the trunk)
+* At each iteration, any branch without child branches grows two child branches out of the branch
+* The tree is fully grown in 5 iterations
+
+![image](https://user-images.githubusercontent.com/901975/66462941-aed64d80-eaae-11e9-9986-2e340df1ca2a.png)
+
+## L-System Strings
+* Although the results of L-systems are usually some form of images, they are represented using simple text in the system, which we call a string
+* An L-system string can have letters and symbols
+* Here are some commonly used ones:
+ * Capital letters such as A, B, F, X and Y
+ * Symbols such as + and -
+* These letters and symbols have some associated drawing actions so that images can be drawn by reading the string
+## An Example L-System String
+* Here is a simple L-system string:
+ *		F+F+F+F
+* The letter ‘F’ and the symbol ‘+’ represent the following actions:
+ * F : moving forward
+ * + : turning right
+* Then by reading the string from left to right, we can perform the associated actions and draw a square as a result
+![image](https://user-images.githubusercontent.com/901975/66463173-20160080-eaaf-11e9-9823-a167b35b94bf.png)
+## Using Turtle Graphics for L-Systems
+* Turtle graphics is very useful in drawing L-System strings
+* For example, the L-System string on the previous slide can be translated to the turtle graphics code shown on the right:
+![image](https://user-images.githubusercontent.com/901975/66463242-4cca1800-eaaf-11e9-887a-b85594d3a708.png)
+##L-System Rules
+* Rules are used to tell the system how the L-system string grows
+* Each rule is a simple replacement of a particular letter or symbol
+* For example, a rule can say, from a given L-system string, replacing every occurrence of a letter F with a string FF, which can be written like this:
+ * F → FF
+* Let’s see how the above rule works with our example L-system string F+F+F+F
+## Using an L-System Rule
+* Given the following example string and rule:
+ * The L-system string:	F+F+F+F
+ * The L-system rule:	F → FF
+* Applying the rule to the string means replacing every matching letter / symbol, i.e.:
+![image](https://user-images.githubusercontent.com/901975/66463380-88fd7880-eaaf-11e9-95aa-24eaa68df734.png)
+## After the First Iteration
+* After using the L-system rule once, we say the system has completed one iteration
+* In the example, the L-system string has become:
+  * FF+FF+FF+FF
+
+* It is easy to see the square produced by the above string will double the size of the initial one
+![image](https://user-images.githubusercontent.com/901975/66463538-d4b02200-eaaf-11e9-9f04-5ac63be10339.png)
+## After the Second Iteration
+* If you want to you can continue to grow the L-system string after the first iteration
+* At iteration 1, the L-system string has become:
+ * FF+FF+FF+FF
+* Applying the L-system rule again will result in the following string (each F has become FF):
+ * FFFF+FFFF+FFFF+FFFF
+* The square drawn using the above string will be four times the size of the initial one
+## Stopping the L-System
+* You can keep on applying the L-system rule repeatedly for many more iterations
+* At some point, you may want to stop growing the image
+* You can do that by simply asking the L-system to stop at a particular iteration
+* For our example, if we stop at iteration n, we will get a square with a size of 2n times of the initial one
+## A Python Program for the Example
+</markdown>
+
+<pycode>
+# Initial string
+string = "F+F+F+F"
+rule = "FF"
+
+for i in range():
+  string = apply_rule(string, rule)
+
+draw(str)
+</pycode>
+
+<pycode>
+# Apply rule to string
+# rule: F->FF
+# string: F+F+F+F outputs FF+FF+FF+FF
+def apply_rule(string, rule):
+  ...
+
+</pycode>
+
+<pycode>
+# Apply rule to string
+# rule: F->FF
+# string: F+F+F+F outputs FF+FF+FF+FF
+def apply_rule(string, rule):
+  ret_str = ""
+  for s in string:
+    if s == 'F':
+      ret_str = ret_str + rule
+    else:
+      ret_str = ret_str + s
+  return ret_str
+
+# Test code
+r = "FF"
+print(apply_rule("F+F", r))
+print(apply_rule("FF+FF+FF", r))
+
+</pycode>
+
+<markdown>
+## Drawing using string
+</markdown>
+<pycode>
+import turtle
+
+def draw(string):
+  for s in string:
+    if s == "F":
+      turtle.forward(10)
+    if s == "+":
+      turtle.right(90)
+
+# Test
+draw("F+F+F")
+</pycode>
+
+
+<markdown>
+## Put all together
+
+</markdown>
+
+<pycode>
+import turtle
+
+def draw(string):
+  for s in string:
+    if s == "F":
+      turtle.forward(10)
+    if s == "+":
+      turtle.right(90)
+
+def apply_rule(string, rule):
+  ret_str = ""
+  for s in string:
+    if s == 'F':
+      ret_str = ret_str + rule
+    else:
+      ret_str = ret_str + s
+  return ret_str
+
+# Initial string
+string = "F+F+F+F"
+rule = "FF"
+iteration = 3
+
+# Main logic
+for i in range(iteration):
+  string = apply_rule(string, rule)
+
+print(string)
+
+draw(string)
+</pycode>
+
+<markdown>
+## Koch Triangle
+* The previous square example is not very interesting
+* Let’s look at a more interesting example – the Koch triangle
+* The Koch triangle uses one letter and two symbols:
+ * F : moving forward
+ * + : turning left
+ * - : turning right
+* The initial L-system string is:  F
+* The rule is:	F → F+F-F-F+F
+![image](https://user-images.githubusercontent.com/901975/66465100-c9aac100-eab2-11e9-91c0-829e001f143c.png)
+
+## Code example (reusing defs)
+</markdown>
+
+<pycode>
+import turtle
+turtle.speed(0)
+turtle.penup()
+turtle.goto(-100, 100)
+turtle.pendown()
+
+def draw(string):
+  '''
+  * F : moving forward
+  * + : turning left
+  * - : turning right
+  '''
+  for s in string:
+    if s == "F":
+      turtle.forward(3)
+    elif s == "+":
+      turtle.left(90)
+    elif s == "-":
+      turtle.right(90)
+
+def apply_rule(string, rule):
+  ret_str = ""
+  for s in string:
+    if s == 'F':
+      ret_str = ret_str + rule
+    else:
+      ret_str = ret_str + s
+  return ret_str
+
+# Initial string
+string = "F"
+rule = "F+F-F-F+F"
+iteration = 3
+
+# Main logic
+for i in range(iteration):
+  string = apply_rule(string, rule)
+
+print(string)
+
+draw(string)
+</pycode>
+
+<markdown>
+## Rings
+* Here is another example:
+  * Initial string:	F-F-F-F
+  * Rule:	F → FF-F-F-F-F-F+F
+* Letters and symbols:
+  * F : moving forward
+  * + : turning left
+  * - : turning right
+
+* At iteration 1, the string becomes:
+FF-F-F-F-F-F+F-FF-F-F-F-F-F+F-FF-F-F-F-F-F+F-FF-F-F-F-F-F+F
+</markdown>
+
+<pycode>
+import turtle
+turtle.speed(0)
+turtle.penup()
+turtle.goto(-100, 100)
+turtle.pendown()
+
+def draw(string):
+  '''
+  * F : moving forward
+  * + : turning left
+  * - : turning right
+  '''
+  for s in string:
+    if s == "F":
+      turtle.forward(5)
+    elif s == "+":
+      turtle.left(90)
+    elif s == "-":
+      turtle.right(90)
+
+def apply_rule(string, rule):
+  ret_str = ""
+  for s in string:
+    if s == 'F':
+      ret_str = ret_str + rule
+    else:
+      ret_str = ret_str + s
+  return ret_str
+
+# Initial string
+string = "F-F-F-F"
+rule = "FF-F-F-F-F-F+F"
+iteration = 2
+
+# Main logic
+for i in range(iteration):
+  string = apply_rule(string, rule)
+
+print(string)
+
+draw(string)
+</pycode>
+
+<markdown>
+## Using Multiple Rules
+* The L-systems we have shown so far use only one L-system rule
+* You can use more than one rules to create L-system images such as the dragon curve
+* Each rule should then describe the replacement of a unique letter/symbol in the L-system string
+
+## Dragon Curve
+* Initial string:	FX
+* Rules:
+  * X → X+YF+
+  * Y → -FX-Y
+* Letters and symbols:
+ * F : moving forward
+ * + : turning left
+ * - : turning right
+ * X : no action
+ * Y : no action
+</markdown>
+
+<pycode>
+def apply_rule(string, rule):
+  ret_str = ""
+  for s in string:
+    if s == 'F':
+      ret_str = ret_str + rule
+    else:
+      ret_str = ret_str + s
+  return ret_str
+
+def apply_rules(string, xrule, yrule):
+  ret_str = ""
+  for s in string:
+    if s == 'X':
+      ret_str = ret_str + xrule
+    elif s == 'Y':
+      ret_str = ret_str + yrule
+    else:
+      ret_str = ret_str + s
+  return ret_str
+
+# Testing
+print(apply_rules("FXY", "X+YF+", "-FX-Y"))
+</pycode>
+
+<markdown>
+## Dragon Curve at Iteration 11
+</markdown>
+
+<pycode>
+import turtle
+turtle.speed(0)
+turtle.penup()
+turtle.goto(-100, 100)
+turtle.pendown()
+
+def draw(string):
+  '''
+  * F : moving forward
+  * + : turning left
+  * - : turning right
+  '''
+  for s in string:
+    if s == "F":
+      turtle.forward(5)
+    elif s == "+":
+      turtle.left(90)
+    elif s == "-":
+      turtle.right(90)
+
+def apply_rules(string, xrule, yrule):
+  ret_str = ""
+  for s in string:
+    if s == 'X':
+      ret_str = ret_str + xrule
+    elif s == 'Y':
+      ret_str = ret_str + yrule
+    else:
+      ret_str = ret_str + s
+  return ret_str
+
+# Initial string
+string = "FX"
+iteration = 11
+
+# Main logic
+for i in range(iteration):
+  string = apply_rules(string, "X+YF+", "-FX-Y")
+
+print(string)
+
+draw(string)
+</pycode>
+
+<markdown>
+## How about we have more than 3 rules, 4 rules?
+* Rules:
+  * X → X+YF+
+  * Y → -FX-Y
+  * F → FF
+* def apply_rules(string, rule1, rule2, rule3, ?):
+* How about list?
+ * ["X", "X+YF+", "Y", "-FX-Y", "F", "FF"]
+ * odd index: matching
+ * even index: replacement
+* example:
+  ```python
+  if list[0] == s:
+     ret_str = ret_str + list[1]
+  ```
+
+</markdown>
+
+<pycode>
+def apply_rules(string, rule_list):
+  ret_str = ""
+  for s in string:
+    matched = False
+    for i in range(0, len(rule_list), 2):
+      if s == rule_list[i]:
+        ret_str = ret_str + rule_list[i+1]
+        matched = True
+        break
+
+    if matched == False:
+      ret_str = ret_str + s
+
+  return ret_str
+
+# Testing
+rlist = ["X", "X+YF+", "Y", "-FX-Y", "F", "FF"]
+ret = apply_rules("FXY", rlist)
+
+print(ret)
+</pycode>
+
+<markdown>
+## Using a List of Lists
+* A better way to write the L-system program is to put the rules in a ‘list of lists’
+```python
+rules = [
+    ["X", "X+YF+"]  ,
+    ["Y", "-FX-Y"]
+    ["F", "FF"]
+]
+</markdown>
+
+<pycode>
+def apply_rules(string, rule_list):
+  ret_str = ""
+  for s in string:
+    matched = False
+    for r in rules:
+      if s == r[0]:
+        ret_str = ret_str + r[1]
+        matched=True
+        break
+
+    if matched == False:
+        ret_str = ret_str + s
+
+  return ret_str
+
+# Testing
+rules = [["X", "X+YF+"],
+         ["Y", "-FX-Y"],
+         ["F", "FF"]]
+ret = apply_rules("FXY", rules)
+
+print(ret)
+</pycode>
+
+<markdown>
+## All together
+* Def
+* List
+* List of list
+</markdown>
+
+<pycode>
+import turtle
+turtle.speed(0)
+turtle.penup()
+turtle.goto(-100, 100)
+turtle.pendown()
+
+def draw(string):
+  '''
+  * F : moving forward
+  * + : turning left
+  * - : turning right
+  '''
+  for s in string:
+    if s == "F":
+      turtle.forward(5)
+    elif s == "+":
+      turtle.left(90)
+    elif s == "-":
+      turtle.right(90)
+
+def apply_rules(string, rule_list):
+  ret_str = ""
+  for s in string:
+    matched = False
+    for r in rules:
+      if s == r[0]:
+        ret_str = ret_str + r[1]
+        matched=True
+        break
+
+    if matched == False:
+        ret_str = ret_str + s
+
+  return ret_str
+
+# Initial string
+string = "FX"
+iteration = 7
+
+rules = [["X", "X+YF+"],
+         ["Y", "-FX-Y"]]
+
+# Main logic
+for i in range(iteration):
+  string = apply_rules(string, rules)
+
+print(string)
+
+draw(string)
+</pycode>
+<!-- EOC -->
+<!-- markdown -> html -->
+
+<script type="text/javascript">
+
+var markTags = document.getElementsByTagName("markdown");
+
+for (i = 0; i < markTags.length; i++) {
+    markTags[i].innerHTML = marked(markTags[i].innerHTML);
+}
+
+var codeHead = '<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">'
+             + '<textarea data-component="activecode" id="code_id" data-lang="python"  data-timelimit=25000 data-caption="">';
+var codeTail = '</textarea></div>';
+
+var codeTags = document.getElementsByTagName("pycode");
+for (i = 0; i < codeTags.length; i++) {
+    codeTags[i].innerHTML = codeHead + codeTags[i].innerHTML + codeTail;
+}
+
+</script>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+
+      | <a href="#">Back to top</a>
+
+    </p>
+    <p>
+    Created by Dan Schellenberg and Sung Kim. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>

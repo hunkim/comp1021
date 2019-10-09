@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<!-- Original: http://opensask.ca/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>COMP1021</title>
+    <link rel="stylesheet" href="static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="static/showEval.css" type="text/css" />
+    <link rel="stylesheet" href="static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="static/video.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '/',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="static/runestonebase.js"></script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="static/bookfuncs.js"></script>
+    <script type="text/javascript" src="static/codemirror.js"></script>
+    <script type="text/javascript" src="static/xml.js"></script>
+    <script type="text/javascript" src="static/css.js"></script>
+    <script type="text/javascript" src="static/htmlmixed.js"></script>
+    <script type="text/javascript" src="static/python.js"></script>
+    <script type="text/javascript" src="static/javascript.js"></script>
+    <script type="text/javascript" src="static/activecode.js"></script>
+    <script type="text/javascript" src="static/skulpt.min.js"></script>
+    <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="static/clike.js"></script>
+    <script type="text/javascript" src="static/timed_activecode.js"></script>
+    <script type="text/javascript" src="static/animationbase.js"></script>
+    <script type="text/javascript" src="static/mchoice.js"></script>
+    <script type="text/javascript" src="static/timedmc.js"></script>
+    <script type="text/javascript" src="static/timed.js"></script>
+    <script type="text/javascript" src="static/clickable.js"></script>
+    <script type="text/javascript" src="static/timedclickable.js"></script>
+    <script type="text/javascript" src="static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="static/pytutor.js"></script>
+    <script type="text/javascript" src="static/codelens.js"></script>
+    <script type="text/javascript" src="static/skulpt.min.js"></script>
+    <script type="text/javascript" src="static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="static/datafile.js"></script>
+    <script type="text/javascript" src="static/dragndrop.js"></script>
+    <script type="text/javascript" src="static/timeddnd.js"></script>
+    <script type="text/javascript" src="static/fitb.js"></script>
+    <script type="text/javascript" src="static/timedfitb.js"></script>
+    <script type="text/javascript" src="static/lib/prettify.js"></script>
+    <script type="text/javascript" src="static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="static/parsons.js"></script>
+    <script type="text/javascript" src="static/timedparsons.js"></script>
+    <script type="text/javascript" src="static/poll.js"></script>
+    <script type="text/javascript" src="static/reveal.js"></script>
+    <script type="text/javascript" src="static/shortanswer.js"></script>
+    <script type="text/javascript" src="static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="static/showEval.js"></script>
+    <script type="text/javascript" src="static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="static/jquery-fix.js"></script>
+    <script type="text/javascript" src="static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="static/waypoints.min.js"></script>
+    <script type="text/javascript" src="static/rangy-core.js"></script>
+    <script type="text/javascript" src="static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="static/user-highlights.js"></script>
+    <script type="text/javascript" src="static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="static/jquery-migrate-1.2.1.min.js"></script>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'cs20sk';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'cs20sk';
+  eBookConfig.runestone_version = '3.0.5';
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("static/img/logo_smallx.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
+        <a class="navbar-brand">COMP1021 - Introduction to Computer Science</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<div class="container" id="main-content">
+
+<!-- EDIT From here --->
+
+<markdown>
+# Loops with Def
+# http://10.c1021.fun
+### David Rossiter, Gibson Lam and Sung Kim
+
+## Outcomes
+
+### After completing this presentation, you are expected to be able to:
+1. Use the range command to make a range of numbers
+1. Write loops using the `for` command
+
+
+## Typical loops
+* `n` iterations
+* `print` 0 to 9
+</markdown>
+
+<pycode>
+# Sum from 1-9
+sum = 0
+for i in range (1, 10):
+  sum = sum + i
+
+print("Sum", sum)
+</pycode>
+
+<markdown>
+## Drawing a Square Using a For Loop
+
+![image](https://user-images.githubusercontent.com/901975/65469362-c18b3880-de99-11e9-82a7-78e9b719cff0.png)
+
+</markdown>
+<pycode>
+import turtle
+
+for i in range(4):
+    turtle.forward(100)
+    turtle.right(90)
+</pycode>
+
+
+<markdown>
+## Spiral Patterns Created Using Turtle
+* In the following two examples, patterns are created using for loops and some cleverly chosen numbers
+* The turtle draws ‘squares’ using a slightly different angle and a slightly different length for each side
+
+
+![image](https://user-images.githubusercontent.com/901975/65469663-c8667b00-de9a-11e9-9b51-80dc35df6be2.png)
+
+* Start with simple sqares
+
+![image](https://user-images.githubusercontent.com/901975/65469893-a4f00000-de9b-11e9-96c4-7ca650eb00dd.png)
+
+![image](https://user-images.githubusercontent.com/901975/65469996-06b06a00-de9c-11e9-8a80-d75c7624ef84.png)
+* for loop: 5, 10, 15, ...
+* `range (0, 200, 5)`
+</markdown>
+
+<pycode>
+import turtle
+
+turtle.speed(10)
+for i in range(0, 200, 5):
+    turtle.forward(i)
+    turtle.right(90)
+</pycode>
+
+<markdown>
+## Spiral Patterns Created Using Turtle
+
+![image](https://user-images.githubusercontent.com/901975/65470153-98b87280-de9c-11e9-815c-7650543cadac.png)
+</markdown>
+
+<pycode>
+import turtle
+
+turtle.speed(10)
+for i in range(0, 300, 3):
+    turtle.forward(i)
+    turtle.right(91)
+</pycode>
+
+<markdown>
+## Flower Spiral Patterns
+
+![image](https://user-images.githubusercontent.com/901975/65471046-48431400-dea0-11e9-9495-5164d77b5654.png)
+
+![image](https://user-images.githubusercontent.com/901975/65471077-66107900-dea0-11e9-96a2-4461e12a8bb1.png)
+
+![image](https://user-images.githubusercontent.com/901975/65471098-7cb6d000-dea0-11e9-931c-282930554805.png)
+
+![image](https://user-images.githubusercontent.com/901975/65471595-4a0dd700-dea2-11e9-85c8-baf14ec16908.png)
+</markdown>
+
+<pycode>
+import turtle
+
+turtle.speed(0)
+turtle.color('purple')
+for i in range(0, 400, 2):
+    turtle.forward(i)
+    turtle.right(89)
+
+for i in range(401, 0, -2):
+    turtle.forward(i)
+    turtle.right(89)
+</pycode>
+
+<pycode>
+# Find MAX
+score = [92, 96, 89, 78, 99, 88, 100]
+length = len(score)
+
+# put a small number
+max = 0
+
+for i in range(0, length):
+  if score[i] > max:
+    max = score[i]
+
+print("Max score is", max)
+
+</pycode>
+
+<pycode>
+# Find MAX
+score = [92, 96, 89, 78, 99, 88, 100]
+
+# put a small number
+max = 0
+
+for s in score:
+  if s > max:
+    max = s
+
+print("Max score is", max)
+</pycode>
+
+<pycode>
+# Find Min
+score = [92, 96, 89, 78, 99, 88, 100]
+
+for s in score:
+
+print("min score is", )
+</pycode>
+<markdown>
+## Find min with def
+* Max
+* Min
+* minmax
+</markdown>
+
+<pycode>
+def find_max(scores):
+  max = score[0]
+  for s in scores:
+    if s > max:
+      max = s
+
+  return s
+
+# Find MAX
+score = [92, 96, 89, 78, 99, 88, 100]
+print(find_max(score))
+
+</pycode>
+
+<pycode>
+# Find Min
+score = [92, 96, 89, 78, 99, 88, 100]
+
+for s in score:
+
+print("min score is", )
+
+<pycode>
+# Prime using for
+sum = 0
+for i in range (2, 100):
+    is_prime = True
+    for j in range(3, i):
+      if i%j == 0:
+        is_prime = False
+
+    if is_prime:
+        print("Prime: ", i)
+        sum = sum + i
+
+print("Sum = " , sum)
+</pycode>
+
+
+<!-- EOC -->
+<!-- markdown -> html -->
+
+<script type="text/javascript">
+
+var markTags = document.getElementsByTagName("markdown");
+
+for (i = 0; i < markTags.length; i++) {
+    markTags[i].innerHTML = marked(markTags[i].innerHTML);
+}
+
+var codeHead = '<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">'
+             + '<textarea data-component="activecode" id="code_id" data-lang="python"  data-timelimit=25000 data-caption="">';
+var codeTail = '</textarea></div>';
+
+var codeTags = document.getElementsByTagName("pycode");
+for (i = 0; i < codeTags.length; i++) {
+    codeTags[i].innerHTML = codeHead + codeTags[i].innerHTML + codeTail;
+}
+
+</script>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+
+      | <a href="#">Back to top</a>
+
+    </p>
+    <p>
+    Created by Dan Schellenberg and Sung Kim. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
